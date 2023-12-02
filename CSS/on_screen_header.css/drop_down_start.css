@@ -1,0 +1,90 @@
+.tooltip_options{
+  border-radius: 5px;;
+  color: white;
+  padding: 29.5px;
+  flex: 0 0 20px;
+  cursor: pointer;
+}
+
+.tooltip_options:hover{
+  font-weight: bolder;
+}
+
+.drop_btn{
+  background-color: transparent;
+  width: 65px;
+  border: none;
+  color: white;
+  flex: 0;
+  padding: 22px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.drop_btn:hover{
+  background-color: rgb(36, 34, 34);
+  font-weight: bolder;
+}
+
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+#dropDown_list{
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  position: absolute;
+  min-width: 190px;
+  max-height: 253px;
+  border-radius: 5px;
+  background-color: rgb(31, 30, 30);
+  box-shadow: 5px 5px 15px black, -5px -5px 15px rgba(0, 0, 0, 0.788);
+  z-index: 1;
+  transition: .2s;
+}
+
+#dropDown_list a{
+  font-size: 15px;
+  padding:5px;
+  display:block;
+  color: rgb(126, 120, 120);
+  font-weight: 900;
+  padding-left: 15px;
+  text-decoration: none;
+  transition: .3s;
+
+}
+
+#dropDown_list a:hover{
+  background-color: rgb(41, 40, 40);
+}
+
+
+#dropDown_list a:focus{
+  color: white;
+}
+
+#dropDown_list.show{
+  opacity: 1;
+  transform: scaleY(1);
+  transition: .3s;
+}
+
+
+
+#js_change_btn.fa-bars-staggered{
+  opacity: 1;
+  transform: rotate(0);
+  transition: all .4s ease;
+}
+
+#js_change_btn.fa-xmark{
+  opacity: 1;
+  transform: rotate(180deg);
+  transition: all .4s ease;
+}
