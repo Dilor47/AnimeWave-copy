@@ -41,7 +41,6 @@ body {
   font-size: 23px;
   border: none;
   outline: none;
-  cursor: pointer;
 }
 
 .search-sign{
@@ -100,63 +99,27 @@ body {
 .tooltip_options{
   border-radius: 5px;;
   color: white;
-  padding: 18px;
-  flex: 0 0 30px;
+  padding: 29.5px;
+  flex: 0 0 20px;
   cursor: pointer;
 }
 
 .tooltip_options:hover{
-  background-color: rgb(36, 34, 34);
   font-weight: bolder;
 }
 
 
+#js_change_btn.fa-bars-staggered{
+  opacity: 1;
+  transform: rotate(0);
+  transition: all .4s ease;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#js_change_btn.fa-xmark{
+  opacity: 1;
+  transform: rotate(180deg);
+  transition: all .4s ease;
+}
 
 
 
@@ -218,6 +181,7 @@ body {
   font-weight: bolder;
 }
 
+
 .dropdown{
   position: relative;
   display: inline-block;
@@ -234,7 +198,7 @@ body {
   background-color: rgb(31, 30, 30);
   box-shadow: 5px 5px 15px black, -5px -5px 15px rgba(0, 0, 0, 0.788);
   z-index: 1;
-  transition: .3s;
+  transition: .2s;
 }
 
 #dropDown_list a{
@@ -249,9 +213,19 @@ body {
 
 }
 
+.symbol_spec{
+  background-color: rgb(20, 20, 20);
+  border-radius: 5px;
+}
+
+.symbol_spec:hover{
+  background-color: rgb(20, 20, 20) !important;
+}
+
 #dropDown_list a:hover{
   background-color: rgb(41, 40, 40);
 }
+
 
 #dropDown_list a:focus{
   color: white;
@@ -264,4 +238,59 @@ body {
 }
 
 
+.profile_menu{
+  position: relative;
+  display: inline-block;
+}
+
+.container_profile{
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  position: absolute;
+  right: 20px;
+  background-color: rgb(31, 30, 30);
+  width: 200px;
+  height: 260px;
+  border-radius: 5px;
+  box-shadow: -5px 5px 15px black, 5px 5px 15px rgba(0, 0, 0, 0.788);
+  transition: .3s;
+}
+
+.container_profile a{
+  display: block;
+  color: rgb(126, 120, 120);
+  text-decoration: none;
+  padding: 7px;
+  padding-left: 13px;
+  transition: .3s;
+}
+
+.container_profile a:hover{
+  background-color: rgb(41, 40, 40);
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.container_profile .symbol{
+  color: rgb(199, 198, 198);
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.container_profile a:focus{
+  color: white;
+  font-weight: 700;
+}
+
+.container_profile a:focus .symbol{
+  color: rgb(182, 20, 182);
+  font-weight: bold;
+}
+
+.container_profile.show{
+  opacity: 1;
+  transform: scaleY(1);
+  transition: .3s;
+}
 

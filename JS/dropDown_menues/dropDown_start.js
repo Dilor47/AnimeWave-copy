@@ -5,8 +5,8 @@ const button = document.querySelector('#js_change_btn');
 dropDown_btn.addEventListener('click', () => {
 
   button.classList.toggle('fa-xmark');
-  button.classList.toggle('fa-bars');
-
+  button.classList.toggle('fa-bars-staggered');
 
   dropDown_menu.classList.toggle('show');
 })
+
