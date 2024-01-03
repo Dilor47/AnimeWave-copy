@@ -15,6 +15,7 @@
   border-radius: 5px;
   box-shadow: -5px 5px 15px black, 5px 5px 15px rgba(0, 0, 0, 0.788);
   transition: .3s;
+  z-index: 5;
 }
 
 .container_profile a{
