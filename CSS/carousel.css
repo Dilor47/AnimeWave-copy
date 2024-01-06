@@ -23,6 +23,7 @@ body{
 .main-carousel{
   margin-top: 70px;
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(209, 4, 65), rgb(0, 0, 0));
+  position: relative;
 }
 
 
@@ -119,4 +120,16 @@ body{
 
 .carousel_button:hover{
   background-color: rgb(103, 30, 172);
+}
+
+
+.flickity-page-dots{
+  position: absolute;
+  top: 93%;
+  left : -42%;
+  color:beige;
+}
+
+.dot.is-selected{
+  background-color: rgb(212, 0, 255);
 }

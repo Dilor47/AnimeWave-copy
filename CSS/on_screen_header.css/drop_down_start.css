@@ -46,16 +46,17 @@
   background-color: rgb(41, 40, 40);
 }
 
-
-#dropDown_list a:focus{
-  color: white;
+#dropDown_list:focus a {
+  color: rgb(255, 255, 255);
 }
+
 
 #dropDown_list.show{
   opacity: 1;
   transform: scaleY(1);
   transition: .3s;
 }
+
 
 
 

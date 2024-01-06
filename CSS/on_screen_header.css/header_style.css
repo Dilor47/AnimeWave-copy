@@ -3,15 +3,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
+  --main-color: rgb(26, 25, 25);
 }
 
 .on_screen_header {
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: rgb(41, 40, 40);
+  background-color: var(--main-color);
   width: 100%;
-  height: 70px;
+  height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +48,7 @@ body {
   padding: 5px;
   color: white;
   border-radius: 5px;
-  flex: 1 1 550px;
+  flex: 1 3 550px;
   display: flex;
   align-items: center;
 }
@@ -90,25 +91,31 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: .4s;
-  background-color: rgba(97, 36, 36, 0);
+  background-color: rgba(255, 10, 10, 0);
+  text-decoration: none;
+  position: relative;
 }
 
-.message{
-  flex: 1 0 50px;
+.together_watch{
+  flex: 0 1 195px;
 }
+
 
 .random_select{
-  flex: 2 1 150px;
+  flex: 0 1 150px;
 }
 
 .read{
-  flex: 2 1 170px;
+  flex: 0 1 170px;
 }
 
 .change_lang{
-  flex: 2 1 50px;
+  flex: 0 1 50px;
 }
 
+.message{
+  flex: 1 1 50px;
+}
 
 
 .together_watch::after{
@@ -121,26 +128,27 @@ body {
   content: "Read Manga";
 }
 
+.together_watch:hover,
+.random_select:hover,
+.read:hover,
+.message:hover,
 .change_lang:hover{
-  color:purple;
-}
-
-.random_select:hover{
-  color:purple;
-}
-
-.message:hover{
-  color:purple;
+  color: rgb(165, 114, 207);
 }
 
 .free_space{
   display: flex;
   justify-content: center;
-  flex: 1 1 150px;
+  flex: 0 10 150px;
   font-size: 40px;
   cursor: pointer;
 }
 
+.cool_stuff{
+  flex: 25 1 auto;
+  display: inline-flex;
+  align-items: center;
+}
 
 
 @media screen and (max-width: 1000px) {
@@ -177,27 +185,60 @@ body {
   }
 }
 
-.users{
-  margin: 10px;
-}
-
-.users::after{
-  content: 'Watch2gether';
-  font-size: 22px;
-}
 
 .choose{
   display: flex;
   flex-direction: row;
-  border-radius: 10px;
 }
 
 
 .choose p{
   margin-right: 1px;
   font-size: 17px;
-  width: 30px;
-  background-color: black;
+  width: 35px;
+  background-color: rgb(48, 43, 43);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+
+.extra_2watch,
+.random_choice{
+  position: absolute;
+  left:50%;
+  top: 40px;
+  background-color: rgb(187, 187, 187);
   padding: 5px;
-  
+  height: auto;
+  border-radius: 4px;
+  font-size: 13px;
+  color: black;
+  white-space: nowrap;
+  transform: translateX(-50%) scaleY(0);
+  transition: transform .1s ease-out 0.1s;
+  transform-origin: top;
+  letter-spacing: 0.05em;
+}
+
+.triangle{
+  clip-path: polygon(
+    0% 100%,
+    50% 0%,
+    100% 100%);
+  width: 10px;
+  height: 7px;
+  background-color: rgb(161, 150, 150);
+  position: absolute;
+  top: -34%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.extra_2watch.active{
+  transform: translateX(-50%) scaleY(1);
+}
+
+
+.random_choice.active{
+  transform: translateX(-50%) scaleY(1);
 }

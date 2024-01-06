@@ -6,7 +6,7 @@ let carousel_html = '';
 
 anime_description.forEach((element) => {
   carousel_html += `
-  <div class="carousel-cell" style="background: linear-gradient(to right, rgb(0, 0, 0), ${element.background}, rgb(0, 0, 0));" >
+  <div class="carousel-cell" style="background: linear-gradient(to right,  rgb(0, 0, 0), ${element.background}, rgb(0, 0, 0));" >
     <div class="descr">
       <div class="all_info_anime">
         <h1>

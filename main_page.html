@@ -21,7 +21,7 @@
     <div class="on_screen_header">
 
       <div class="dropdown">
-        <div class="drop_btn js_dropDown">
+        <div class="drop_btn js_dropDown" tabindex="0">
           <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-2xl"></i> 
         </div>
         <div id="dropDown_list" class="dropDown_content">
@@ -49,28 +49,44 @@
           </i>
       </div>
 
-    
 
-      <div class="together_watch">
-        <i class="fa-solid fa-user-group fa-xl"></i>
-      </div>
+      <div class="cool_stuff">
 
-      <div class="random_select">
-        <i class="fa-solid fa-shuffle fa-xl"></i>
-      </div>
+        <a class="together_watch js_2gether" data-class="extra_2watch" href="main_page.html">
+          <i class="fa-solid fa-user-group fa-lg"></i>
+          <div class="extra_2watch">
+            <div>Watch with friends</div>
+            <div class="triangle"></div>
+          </div>
+          
+        </a>
+        
 
-      <div class="read">
-        <i class="fa-solid fa-book fa-xl"></i>
-      </div>
+        <a class="random_select js_random" data-class="random_choice" href="main_page.html">
+          <i class="fa-solid fa-shuffle fa-lg"></i>
+          <div class="random_choice">
+            <div>Watch a random anime</div>
+            <div class="triangle"></div>
+          </div
+        </a>
 
-      <div class="change_lang">
-        <div class="choose">
-          <p>EN</p>
-          <p>JP</p>
+        <a class="read js_read" href="main_page.html">
+          <i class="fa-solid fa-book fa-lg"></i>      
+        </a>
+
+        <div class="change_lang">
+          <div class="choose">
+            <p class="english_titles">EN</p>
+            <p class="japanese_titles">JP</p>
+          </div>
         </div>
+
+        <div class="free_space"></div>
+
+        
       </div>
 
-      <div class="free_space"></div>
+    
 
       <div class="message">
         <i class="fa-regular fa-bell fa-xl"></i>
@@ -94,8 +110,6 @@
 
     <div class="main-carousel"></div>
 
-    <div class="users"><i class="fa-solid fa-user-group fa-2xl"></i></div>
-
     <script 
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -103,6 +117,7 @@
     </script>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="JS/header.js"></script>
     <script src="JS/dropDown_menues/dropDown_start.js"></script>
     <script src="JS/dropDown_menues/dropDown_end.js"></script>
     <script type="module" src="JS/carousel.js"></script>
