@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
   --main-color: rgb(26, 25, 25);
+  --hover-header-color: rgb(165, 114, 207);
 }
 
 .on_screen_header {
@@ -70,7 +71,7 @@ body {
 }
 
 .search-sign:hover{
-  color: rgb(105, 14, 128);
+  color: var(--hover-header-color);
   font-weight: bold;
 }
 
@@ -133,7 +134,7 @@ body {
 .read:hover,
 .message:hover,
 .change_lang:hover{
-  color: rgb(165, 114, 207);
+  color: var(--hover-header-color);
 }
 
 .free_space{

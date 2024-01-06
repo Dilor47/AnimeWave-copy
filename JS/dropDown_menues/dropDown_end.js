@@ -5,3 +5,8 @@ button_endMenu.addEventListener('click', () => {
   container_show.classList.toggle('show');
 
 })
+
+button_endMenu.addEventListener('focusout', () => {
+  container_show.classList.remove('show');
+
+})
