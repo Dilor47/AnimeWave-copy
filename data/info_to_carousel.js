@@ -1,6 +1,6 @@
 export const anime_description = [
   {
-    title: 'BLEACH: THOUSAND...',
+    title: 'BLEACH: THOU...',
     age_limit: '+13',
     is_there_sub: '<i class="fa-solid fa-closed-captioning fa-2xl icon"></i>',
     is_there_vSub: '<i class="fa-solid fa-microphone fa-xl icon"></i>',
@@ -16,6 +16,7 @@ export const anime_description = [
     is_there_vSub: '<i class="fa-solid fa-microphone fa-xl icon"></i>',
     release_data: 'October 2, 2008',
     main_desc: '"Toradora!" is a delightful romantic comedy anime centered around Ryuji and Taiga, high school students who team up to assist each other in their romantic pursuits. Despite their contrasting personalities, their partnership leads to unexpected developments in their own relationship...',
+    short_desc: '"Toradora!" is a delightful romantic comedy anime centered around Ryuji and Taiga, high school students who team up to assist each other in their romantic pursuits.',
     image: 'images/images_carousel/toradora_2.jpg',
     background: 'rgb(115, 107, 107)'
   },

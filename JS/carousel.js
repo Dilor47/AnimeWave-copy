@@ -33,7 +33,9 @@ anime_description.forEach((element) => {
         </div>
       </div>
     </div>
-    <img src="${element.image}">
+    <div class="caros_image">
+      <img src="${element.image}">
+    </div>
   </div>`
 });
 
