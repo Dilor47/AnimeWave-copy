@@ -13,8 +13,8 @@ dropDown_btn.addEventListener('click', () => {
 
 
 dropDown_btn.addEventListener('focusout', (event) => {
-  button.classList.toggle('fa-xmark');
-  button.classList.toggle('fa-bars-staggered');
+  button.classList.remove('fa-xmark');
+  button.classList.add('fa-bars-staggered');
 
-  dropDown_menu.classList.toggle('show');
+  dropDown_menu.classList.remove('show');
 })
