@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Newsreader:opsz,wght@6..72,500&family=Playfair+Display:ital@1&family=Poppins:wght@300&family=Signika:wght@600&family=Slabo+27px&family=Work+Sans:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+
+html{
+  --social-media-grey: rgb(140, 139, 148);
+  --social-dark-grey: rgb(85, 85, 85);
+}
+
+.social_media{
+  width: 75%;
+  height:auto;
+  display: block;
+  background-color: rgb(0, 0, 0);
+  margin: 25px;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+.message_to_user{
+  color: var(--social-media-grey);
+  padding-left: 15px;
+}
+
+.where_findUs{
+  display: flex;
+  font-family: 'Slabo 27px', sans-serif;
+  justify-content:space-around;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.sum_followers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 0;
+  padding: 0 20px;
+  font-family: 'Raleway', sans-serif;
+  color: var(--social-dark-grey);
+}
+
+.sum_followers p{
+  margin:0;
+  padding:0;
+}
+
+.where_findUs i{
+  background-color: rgb(21, 56, 21);
+  flex: 0 1 150px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 0 10px;
+  height: 35px;
+  margin: 10px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.free_space{
+  flex: 4 3 auto;
+}
+
+.message_to_user::after{
+  content: 'If you enjoy the website, please consider sharing it with your friends. Thank you!';
+  font-size: 13px;
+  letter-spacing: .9px;
+  font-weight: 800;
+}
+
+
+.media_style{
+  font-size: 15px;
+} 
+
+
+.where_findUs .facebook{
+  background-color: rgb(21, 112, 197);
+}
+.where_findUs .messenger{
+  background-color: rgb(105, 139, 250);
+}
+.where_findUs .twitter{
+  background-color: rgb(0, 0, 0);
+}
+
+.where_findUs .reddit{
+  background-color: rgb(228, 19, 19);
+}
+
+.where_findUs .whatsApp{
+  background-color: rgb(54, 197, 26);
+}
+
+.where_findUs .telegram{
+  background-color: rgb(39, 127, 226);
+}
+
+
+.media_style:after{
+  content: attr(data-followers);
+  font-size: 15px;
+  padding-left: 10%;
+} 
+
+
+@media screen and (max-width: 1000px) {
+  .free_space{
+    display:none;
+  }
+  .media_style:after{
+    content: none;
+  } 
+}
+
+@media screen and (max-width: 800px) {
+  .where_findUs .telegram,
+  .where_findUs .messenger{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .where_findUs .whatsApp{
+    display:none;
+  }
+}
+
+.hover_jump{
+  transform: translateY(0);
+  transition: all .3s ease-in-out;
+}
+
+.hover_jump:hover{
+  transform: translateY(-8px);
+}
+
+
+
+
+
+

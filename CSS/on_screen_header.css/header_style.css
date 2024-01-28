@@ -241,6 +241,7 @@ body {
   transform: translateX(-50%);
 }search
 
+
 .extra_2watch.active{
   transform: translateX(-50%) scaleY(1);
 }
@@ -249,6 +250,7 @@ body {
 .random_choice.active{
   transform: translateX(-50%) scaleY(1);
 }
+
 
 /*menu to messages*/
 
