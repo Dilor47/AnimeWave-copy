@@ -26,6 +26,12 @@ anime_description.forEach((element) => {
         <p class="main_text">
           ${element.main_desc}
         </p>
+        <p class='middle_text_length'>
+          ${element.short_desc}
+        </p>
+        <p class='smallest_text_length'>
+          ${element.smallest_desc}
+        </p>
 
         <div class="carousel_button">
           <i class="fa-solid fa-play fa-2xl"></i>
