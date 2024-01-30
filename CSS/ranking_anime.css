@@ -1,0 +1,10 @@
+.top_anime{
+  background-color: rgb(255, 0, 212);
+  width: 25%;
+}
+
+.anime_tops{
+  height: 300px;
+  background-color: aqua;
+  border: 3px solid whitesmoke;
+}

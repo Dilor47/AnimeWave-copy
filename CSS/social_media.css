@@ -12,7 +12,7 @@ html{
   height:auto;
   display: block;
   background-color: rgb(0, 0, 0);
-  margin: 25px;
+  margin: 20px;
   border-radius: 10px;
   padding: 5px;
 
@@ -60,6 +60,7 @@ html{
   text-align: center;
   color: white;
   cursor: pointer;
+  font-weight: 100;
 }
 
 .free_space{
@@ -90,15 +91,15 @@ html{
 }
 
 .where_findUs .reddit{
-  background-color: rgb(228, 19, 19);
+  background-color: rgb(206, 41, 41);
 }
 
 .where_findUs .whatsApp{
-  background-color: rgb(54, 197, 26);
+  background-color: rgb(70, 192, 45);
 }
 
 .where_findUs .telegram{
-  background-color: rgb(39, 127, 226);
+  background-color: rgb(42, 119, 207);
 }
 
 
@@ -138,6 +139,7 @@ html{
 
 .hover_jump:hover{
   transform: translateY(-8px);
+  filter: brightness(70%);
 }
 
 
