@@ -1,12 +1,25 @@
+
 body{
   background-color: rgb(26, 25, 25);
+  font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 .two_grids{
+  margin-top: 30px;
   height: 200vh;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 100%;
-  border: 3px solid
+}
+
+.bigger_grid{
+  grid-area: 1 / 1 / 2 / 2 ;
+  background-color: rgb(23, 52, 36);
+  
+}
+
+.smaller_grid{
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: rgba(172, 172, 172, 0.075);
 }
 
