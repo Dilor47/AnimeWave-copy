@@ -12,6 +12,13 @@
   justify-content: space-around;
 }
 
+
+.header_choice{
+  height: 60px;
+  border: 1px solid pink;
+  margin-bottom: 10px;
+}
+
 .period{
   display: flex;
   align-items: center;
@@ -21,16 +28,25 @@
 .header_text{
   color: rgb(205, 211, 215);
   width: 62%;
-  text-align: start;
   padding-left: 20px;
-  font-size: 30px;
-  font-weight: 550;
+  display: flex;
+  align-items: center;
+
 }
 
+.header_text p{
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 550;
+  
+}
+
+
 .buttons_container{
-  background-color: var(--main-color);
+  background-color: var(--darker-main-color);
   width: 175px;
-  height: 40px;
+  height: 36px;
   margin-right: 4px;
   border-radius: 5px;
 }
@@ -51,15 +67,15 @@
   flex: 1.5;
 }
 
+.data_style_button.focused{
+  background-color: rgb(165, 35, 190);
+}  
 
 .data_style_button:hover{
   background-color: rgb(115, 117, 118);
   color: var(--main-color);
+  
 }
-
-.data_style_button:focus{
-}
-
 
 .anime_tops{
   height: 1500px;
