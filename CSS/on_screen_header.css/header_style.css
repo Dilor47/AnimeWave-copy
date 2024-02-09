@@ -12,9 +12,7 @@ body {
 }
 
 .on_screen_header {
-  position: fixed;
-  top: 0;
-  z-index: 100;
+  z-index: 5;
   background-color: var(--main-color);
   width: 100%;
   height: 75px;
@@ -49,7 +47,7 @@ body {
 .search_container{
   background-color: var(--darker-main-color);
   width: auto;
-  height: 32px;
+  height: 40px;
   padding: 5px;
   color: var(--color-white-icons);
   border-radius: 5px;
@@ -224,6 +222,7 @@ body {
   transition: transform .1s ease-out 0.1s;
   transform-origin: top;
   letter-spacing: 0.05em;
+  z-index: 5;
 }
 
 .triangle{
@@ -238,7 +237,7 @@ body {
   top: -34%;
   left: 50%;
   transform: translateX(-50%);
-}search
+}
 
 
 .extra_2watch.active{
@@ -268,6 +267,7 @@ body {
   border: 1px solid var(--header-border-lighter);
   transform-origin: top;
   transition: .1s ease-in-out;
+  z-index: 5;
 }
 
 .menu_message.active{

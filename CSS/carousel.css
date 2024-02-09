@@ -19,7 +19,7 @@ body{
 
 
 .main-carousel{
-  margin-top: 70px;
+
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(209, 4, 65), rgb(0, 0, 0));
   position: relative;
 }

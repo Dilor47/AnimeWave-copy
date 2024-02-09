@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
 
 .top_anime{
   margin: 10px;
@@ -10,13 +12,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  
 }
 
 
 .header_choice{
   height: 60px;
-  border: 1px solid pink;
   margin-bottom: 10px;
+  border: 2px rgb(255, 0, 43);
 }
 
 .period{
@@ -44,7 +47,7 @@
 
 
 .buttons_container{
-  background-color: var(--darker-main-color);
+  background-color: var(--lighter-main-color);
   width: 175px;
   height: 36px;
   margin-right: 4px;
@@ -79,6 +82,146 @@
 
 .anime_tops{
   height: 1500px;
-  background-color: rgb(0, 111, 111);
-  border: 3px solid whitesmoke;
+  background-color: var(--darker-main-color);
+  font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
+
+
+.element{
+  background-color: var(--lighter-main-color);
+  width: 100%;
+  height: 78px;
+  border-right: 2px solid pink;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+
+.element,
+.deep_desc,
+.details{
+  display: flex;
+  flex-direction: row;
+}
+
+.rank{
+  min-width: 50px;
+  max-width: 50px;
+  display: flex;
+  justify-content: center;
+
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px; 
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rank img{
+  max-width: 50px;
+  max-height: 55px;
+  width: auto;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-self: center;
+  justify-self: center;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+
+.anime_pict,
+.anime_pict img{
+  max-width: 60px;
+  max-height:78px;
+  width: auto;
+  height: auto;
+}
+
+
+
+.deep_desc{
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+
+}
+
+.title{
+  height: 70%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.ep_release{
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 19px;
+  padding-left: 10px;
+}
+
+.mic_sub_total{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 20px;
+  justify-content: space-around;
+  padding-right: 5%;
+}
+
+.fa{
+  font-size: 10px;
+  display: flex;
+  align-items:center;
+  padding: 0 6px;
+}
+
+.ep_capt,
+.ep_mic,
+.ep_episodes{
+  height: 19px;
+  display: flex;
+  align-items:center;
+  border-radius: 2px;
+}
+
+
+.ep_capt{
+  background-color: rgb(94, 0, 157);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.ep_mic{
+  background-color: rgb(137, 126, 10);
+  clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.ep_episodes{
+  background-color: rgb(143, 143, 143);
+  clip-path: polygon(20% 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.ep_capt_amount::before{
+  content: '\f20a'; 
+  display: inline-block;
+  padding-right: 5px;
+  font-size: 13px;
+  
+}
+
+.ep_mic_amount::before{
+  content: '\f130';
+  display: inline-block;
+  padding-right: 5px;
+  font-size: 13px;
+}
+
+.ep_episodes_amount{
+  padding: 5px;
+}
+
