@@ -91,7 +91,8 @@
   background-color: var(--lighter-main-color);
   width: 100%;
   height: 78px;
-  border-right: 2px solid pink;
+  cursor: pointer;
+
   border-radius: 5px;
   margin-bottom: 5px;
 }
@@ -178,10 +179,10 @@
   font-size: 10px;
   display: flex;
   align-items:center;
-  padding: 0 6px;
+  padding: 0 10px;
 }
 
-.ep_capt,
+.ep_sub,
 .ep_mic,
 .ep_episodes{
   height: 19px;
@@ -191,22 +192,22 @@
 }
 
 
-.ep_capt{
-  background-color: rgb(94, 0, 157);
+.ep_sub{
+  background-color: rgb(96, 0, 160);
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
 }
 
 .ep_mic{
-  background-color: rgb(137, 126, 10);
+  background-color: rgb(92, 1, 43);
   clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
 }
 
 .ep_episodes{
-  background-color: rgb(143, 143, 143);
+  background-color: rgb(96, 96, 96);
   clip-path: polygon(20% 0, 100% 0, 85% 100%, 0 100%);
 }
 
-.ep_capt_amount::before{
+.ep_sub_amount::before{
   content: '\f20a'; 
   display: inline-block;
   padding-right: 5px;
@@ -221,7 +222,6 @@
   font-size: 13px;
 }
 
-.ep_episodes_amount{
-  padding: 5px;
+.type_anime{
+  padding: 6px;
 }
-
