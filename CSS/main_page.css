@@ -2,6 +2,7 @@
 body{
   --darker-main-color: #141414;
   --lighter-main-color: #1C1C1c;
+  --slighteer-light-grey: rgb(41, 39, 39);
   --color-text: #AAAAAA;
   background-color: var(--darker-main-color);
   color: #777;
@@ -18,10 +19,23 @@ body{
 
 .bigger_grid{
   grid-area: 1 / 1 / 2 / 2 ;
-  background-color: #252323;
+  /*background-color: #252323;*/
+  
 }
 
 .smaller_grid{
   grid-area: 1 / 2 / 2 / 3;
   color: var(--color-text);
+}
+
+@media screen and (max-width: 1200px) {
+  .smaller_grid{
+    display: none;
+  }
+
+  .two_grids{
+    grid-template-columns: 1fr; 
+  }
+
+
 }

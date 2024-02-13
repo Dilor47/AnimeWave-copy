@@ -8,14 +8,13 @@ html{
 }
 
 .social_media{
-  width: 98%;
-  height:auto;
+  width: calc(100% - 40px);
+  height: auto;
   display: block;
   background-color: rgb(0, 0, 0);
   margin: 20px;
   border-radius: 10px;
   padding: 5px;
-
 }
 
 .message_to_user{

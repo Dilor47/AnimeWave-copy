@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+
+.top_anime{
+  margin: 10px;
+  font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.header_choice,
+.buttons_container{
+  color: var(--color-white-icons);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+
+.header_choice{
+  height: 60px;
+  margin-bottom: 10px;
+  border: 2px rgb(255, 0, 43);
+}
+
+.period{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_text{
+  color: rgb(205, 211, 215);
+  width: 62%;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+.header_text p{
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 550;
+  
+}
+
+.buttons_container{
+  background-color: var(--lighter-main-color);
+  width: 175px;
+  height: 36px;
+  margin-right: 4px;
+  border-radius: 5px;
+}
+
+.data_style_button{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  margin: 2px;
+  flex: 1;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.data_style_button.button_month{
+  flex: 1.5;
+}
+
+.data_style_button.focused{
+  background-color: rgb(165, 35, 190);
+}  
+
+.data_style_button:hover{
+  background-color: rgb(115, 117, 118);
+  color: var(--main-color);
+}
+
+
+
+@media screen and (max-width: 1500px) {
+  .header_choice{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header_text{
+    width: 100%;
+    padding-left: 0;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .header_text p{
+    font-size: 25px;
+  }
+
+  .period{
+    padding-bottom: 10px;
+  }
+}
