@@ -1,0 +1,28 @@
+.main_hover_cont{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  background-color: rgb(185, 107, 159);
+  width:300px;
+  height: auto;
+  color: rgb(90, 0, 42);
+  z-index: 2;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  transform-origin: left top;
+}
+
+
+.anime_pict:hover + .main_hover_cont{
+  opacity: 1;
+}
+
+
+.main_hover_cont:hover{
+  opacity: 1;
+  cursor: auto;
+}
+
+.anime_hover_cont{
+  padding: 20px;
+}

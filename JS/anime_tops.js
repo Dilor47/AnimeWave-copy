@@ -21,6 +21,9 @@ function render_list() {
   const remnder_from = picked_data === true? top_anime_data : schuffle_data(top_anime_data);
 
   remnder_from.forEach((anime_elem, i) => {
+    if(i > 0) {
+      return;
+    }
     const index = i + 1;
 
     let html = `
@@ -31,6 +34,78 @@ function render_list() {
       <div class="anime_pict">
         <img src="${anime_elem.img_anime}">
       </div>
+
+      <div class="main_hover_cont">
+        <div class="anime_hover_cont">
+
+          <div class="title_hover">
+            <div class="hover_title">Title</div>
+          </div>
+
+          <div class="ep_available episode_info">
+
+            <div class="ep_release">
+
+              <div class="age_limit">PG 13</div>
+
+              <p class="isHD">HD</p>
+
+              <div class="mic_sub_total">
+                
+                <div class="ep_sub">
+                  <i class="ep_sub_amount fa">12</i>
+                </div>
+    
+                <div class="ep_mic">
+                  <i class="ep_mic_amount fa">44</i>
+                </div>
+                
+                <div class="ep_episodes">
+                  <i class="ep_episodes_amount fa">76</i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="short_hover_desc">
+            <p>Jirou Yakuin had his sights set on being paired with Shiori Sakurazaka for the mandatory "Couple Practical" class. As a</p>
+          </div>
+
+          <div class="detailer_anime_info">
+
+            <div class="other_name">
+              <p class="littl_item">Other names: ...</p>
+            </div>
+
+            <div class="h_scores">
+              <p class="littl_item">Scores: ...</p>
+            </div>
+
+            <div class="aired_date">
+              <p class="littl_item">Data aired: ... to ...</p>
+            </div>
+
+            <div class="duration">
+              <p>Duration: ...</p>
+            </div>
+
+            <div class="anime_status">
+              <p>Status: ...</p>
+            </div>
+
+            <div class="genre">
+              <p>Genre: ...</p>
+            </div>
+
+            <div class="action_cont">
+              <button>Watch</button>
+              <i class="fa-solid fa-people-arrows"></i>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>  
+
 
       <div class="deep_desc">
         <div class="title">
