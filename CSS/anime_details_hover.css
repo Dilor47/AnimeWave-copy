@@ -1,28 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 .main_hover_cont{
+  font-family: 'Josefin Sans', sans-serif;
+
   position: absolute;
   top: 50%;
-  left: 25%;
-  background-color: rgb(185, 107, 159);
-  width:300px;
+  /*left: 25%;*/
+  left: 5%;
+  background-color: var(--slighteer-light-grey);
+  border: .5px solid rgb(27, 26, 26);
+  width: 300px;
   height: auto;
-  color: rgb(90, 0, 42);
+  color: var(--color-text);
+  border-radius: 5px;
   z-index: 2;
-  transition: all .4s ease-in-out;
-  opacity: 0;
-  transform-origin: left top;
-}
+  transition: all .2s ease-in-out;
+  /*opacity: 0;
+  transform-origin: top left;
+  transform: scale(0);
+  */
+  font-size: 12px;
 
+}
 
 .anime_pict:hover + .main_hover_cont{
   opacity: 1;
+  transform: scale(1);
 }
 
 
 .main_hover_cont:hover{
   opacity: 1;
-  cursor: auto;
+  transform: scale(1);
 }
+
+.genre_style{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.genre_style li{
+  margin: 0 2px;
+  transition: all .3s ease-in-out;
+}
+
+.genre_style li:hover{
+  color:rgb(199, 0, 179);
+}
+
 
 .anime_hover_cont{
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
+.title_hover{
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.hover_title{
+  line-height: 1.3;
+  letter-spacing: .4px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.ep_release{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  flex-direction: row;
+  gap: 10px;
+}
+
+.ep_release:first-child{
+  padding-left: 0;
+}
+
+.age_limit{
+  display: flex;
+  height: auto;
+  background-color: transparent;
+  font-size: 10px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  color:var(--color-white-icons);
+  border: 1px solid var(--color-white-icons);
+} 
+
+.isHD{
+  background-color: grey;
+  color: var(--slighteer-light-grey);
+  border-radius: 2px;
+  padding: 2px;
+  font-size: 11px;
+}
+
+.fa.fahov{
+  font-size: 10px;
+  display: flex;
+  align-items:center;
+  padding: 0 10px;
+}
+
+.ep_subhov,
+.ep_michov,
+.ep_episodeshov{
+  height: 19px;
+  display: flex;
+  align-items:center;
+  border-radius: 2px;
+}
+
+.short_hover_desc{
+  height: auto;
+}
+
+.short_hover_desc p{
+  letter-spacing: 1.2;
+  line-height: 1.2;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.make_row{
+  display:flex;
+  flex-direction: row;
+}
+
+.component_name{
+  color: var(--color-white-icons);
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 400;
+  padding-right: 2px;
+}
+
+.comp_info{
+  padding: 0;
+  margin: 1.5px 0;
+  font-weight: 600;
+  letter-spacing: 1.2;
+  font-size: 13.5px;
+  flex-wrap: wrap;
+}
+
+

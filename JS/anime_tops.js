@@ -18,9 +18,9 @@ render_list();
 function render_list() {
   let html_animeTops = '';
 
-  const remnder_from = picked_data === true? top_anime_data : schuffle_data(top_anime_data);
+  const render_from = picked_data === true? top_anime_data : schuffle_data(top_anime_data);
 
-  remnder_from.forEach((anime_elem, i) => {
+  render_from.forEach((anime_elem, i) => {
     if(i > 0) {
       return;
     }
@@ -39,7 +39,7 @@ function render_list() {
         <div class="anime_hover_cont">
 
           <div class="title_hover">
-            <div class="hover_title">Title</div>
+            <div class="hover_title">${anime_elem.title}</div>
           </div>
 
           <div class="ep_available episode_info">
@@ -48,61 +48,65 @@ function render_list() {
 
               <div class="age_limit">PG 13</div>
 
-              <p class="isHD">HD</p>
+              ${anime_elem.hd? `<p class="isHD">HD</p>`: ''}
+
 
               <div class="mic_sub_total">
                 
-                <div class="ep_sub">
-                  <i class="ep_sub_amount fa">12</i>
-                </div>
+                ${isThereSubDub(anime_elem.sub, 'sub', 'hov')} 
     
-                <div class="ep_mic">
-                  <i class="ep_mic_amount fa">44</i>
-                </div>
+                ${isThereSubDub(anime_elem.dub, 'mic', 'hov')}
                 
-                <div class="ep_episodes">
-                  <i class="ep_episodes_amount fa">76</i>
-                </div>
+                ${getTotalEp(anime_elem.total_episodes, true)}
+                
               </div>
             </div>
           </div>
-
+          
           <div class="short_hover_desc">
-            <p>Jirou Yakuin had his sights set on being paired with Shiori Sakurazaka for the mandatory "Couple Practical" class. As a</p>
+            <p>${anime_elem.short_desc}</p>
           </div>
 
           <div class="detailer_anime_info">
 
-            <div class="other_name">
-              <p class="littl_item">Other names: ...</p>
+            <div class="other_name make_row">
+              <p class='comp_info'> <span class="component_name">Other names: </span> 
+              ${unpack_array(anime_elem.other_names)}</p>
             </div>
 
-            <div class="h_scores">
-              <p class="littl_item">Scores: ...</p>
+            <div class="h_scores make_row">
+              <p class='comp_info'> <span class="component_name">Scores: </span> 
+              ${anime_elem.score} <span class="component_name">/${anime_elem.reviewed} reviews </span>  </p>
+            </div>  
+
+            <div class="aired_date make_row">
+              <p class='comp_info'> <span class="component_name">Data aired: </span> 
+              ${anime_elem.data_aired} to ${anime_elem.data_completed}</p>
             </div>
 
-            <div class="aired_date">
-              <p class="littl_item">Data aired: ... to ...</p>
+            <div class="duration make_row">
+              <p class='comp_info'> <span class="component_name">Duration: </span> 
+              ${anime_elem.duration} min</p>
             </div>
 
-            <div class="duration">
-              <p>Duration: ...</p>
+            <div class="anime_status make_row">
+              <p class='comp_info'> <span class="component_name">Status: </span> 
+              ${anime_elem.status }</p>
             </div>
 
-            <div class="anime_status">
-              <p>Status: ...</p>
-            </div>
-
-            <div class="genre">
-              <p>Genre: ...</p>
+            <div class="genre make_row">
+              <ul class="genre_style comp_info"><span class="component_name">Genre: </span> 
+              ${create_genre(anime_elem.genre)}</ul>
             </div>
 
             <div class="action_cont">
-              <button>Watch</button>
+              <button href='${anime_elem.link_to_anime}' >Watch</button>
               <i class="fa-solid fa-people-arrows"></i>
               <i class="fa-solid fa-plus"></i>
             </div>
+
           </div>
+
         </div>
       </div>  
 
@@ -120,9 +124,8 @@ function render_list() {
 
             ${isThereSubDub(anime_elem.dub, 'mic')}
             
-            <div class="ep_episodes">
-              <i class="ep_episodes_amount fa">${anime_elem.total_episodes}</i>
-            </div>
+            ${getTotalEp(anime_elem.total_episodes)}
+
           </div>
           <div class="watch_to">
             <i class="fa-solid fa-minus fa-xs"></i>
@@ -138,15 +141,21 @@ function render_list() {
 }
 
 
-
-function isThereSubDub(isAvailable, subDub) {
+function isThereSubDub(isAvailable, subDub, hover_ind='') {
   return isAvailable? (
-   `<div class="ep_${subDub}">
-      <i class="ep_${subDub}_amount fa">${isAvailable}</i>
+   `<div class="ep_${subDub + hover_ind}">
+      <i class="ep_${subDub + hover_ind}_amount fa ${hover_ind? 'fahov' : ''}">${isAvailable}</i>
     </div>`
   ) : '';
 };
 
+function getTotalEp(amount, type=false) {
+  return `
+    <div class="${type? 'ep_episodeshov': 'ep_episodes'}">
+      <i class="ep_episodes_amount fa ${type? 'fahov': ''}">${amount}</i>
+    </div>
+    `
+}
 
 function pick_colorRank(position) {
   if(position == 1) {
@@ -160,7 +169,6 @@ function pick_colorRank(position) {
   }
 }
 
-
 function schuffle_data(ready_array) {
   const data = ready_array.map(element => element);
 
@@ -170,3 +178,18 @@ function schuffle_data(ready_array) {
   }
   return data
 }
+
+function create_genre(genres) {
+  let genres_choice = '';
+  genres.forEach((genre_elem) => {
+    genres_choice += `<li href='#'>${genre_elem}, </li>`;
+  });
+  return genres_choice;
+
+}
+
+function unpack_array(array) {
+  const ready_one = array.join(', ');
+  return ready_one;
+}
+
