@@ -19,9 +19,12 @@ body{
 
 
 .main-carousel{
-
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(209, 4, 65), rgb(0, 0, 0));
   position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 

@@ -3,17 +3,27 @@ body {
   padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
   --main-color: rgb(26, 25, 25);
-  --hover-header-color: rgb(165, 114, 207);
+  --hover-header-color: rgb(151, 101, 192);
   --color-lang-message: rgb(35, 37, 37);
   --header-border-color: rgb(24, 21, 21);
   --header-border-lighter: rgb(56, 55, 55);
   --text-in-shadow: rgb(114, 114, 114);
 }
 
+.on_screen_header_cont{
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: var(--main-color);
+}
+
 .on_screen_header {
   z-index: 5;
   background-color: var(--main-color);
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  justify-content: center;
   height: 75px;
   display: flex;
   justify-content: space-between;
@@ -180,7 +190,7 @@ body {
 }
 
 .choose:hover{
-  background-color: var(--hover-header-color);
+  background-color: rgb(146, 55, 221);
 }
 
 
