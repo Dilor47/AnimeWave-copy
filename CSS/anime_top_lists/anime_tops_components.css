@@ -126,7 +126,7 @@
 
 .ep_sub,
 .ep_subhov{
-  background-color: rgb(96, 0, 160);
+  background-color: var(--purple-color-effect);
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
 }
 

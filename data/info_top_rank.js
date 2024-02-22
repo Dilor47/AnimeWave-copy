@@ -17,7 +17,7 @@ const top_anime_data = [
     data_aired: 'Oct 9, 2022',
     duration: '23',
     status: 'Completed',
-    genre: ['romance', 'comedy', 'ecchi', 'drama'],
+    genre: ['Romance', 'Comedy', 'Ecchi', 'Drama'],
     link_to_anime: ''
   },
   {

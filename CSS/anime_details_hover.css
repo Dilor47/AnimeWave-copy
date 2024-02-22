@@ -5,8 +5,7 @@
 
   position: absolute;
   top: 50%;
-  /*left: 25%;*/
-  left: 5%;
+  left: 25%;
   background-color: var(--slighteer-light-grey);
   border: .5px solid rgb(27, 26, 26);
   width: 300px;
@@ -15,12 +14,10 @@
   border-radius: 5px;
   z-index: 2;
   transition: all .2s ease-in-out;
-  /*opacity: 0;
+  opacity: 0;
   transform-origin: top left;
   transform: scale(0);
-  */
   font-size: 12px;
-
 }
 
 .anime_pict:hover + .main_hover_cont{
@@ -42,11 +39,12 @@
 
 .genre_style li{
   margin: 0 2px;
-  transition: all .3s ease-in-out;
+  transition: all .2s ease-in-out;
+  color:var(--purple-lighter-color);
 }
 
 .genre_style li:hover{
-  color:rgb(199, 0, 179);
+  color: rgb(195, 116, 221);
 }
 
 
@@ -60,7 +58,7 @@
   font-size: 17px;
   font-weight: 700;
   margin-bottom: 5px;
-  border: 1px solid rgba(255, 255, 255, 0);
+  color: var(--purple-lighter-color);
 }
 
 .hover_title{
@@ -72,7 +70,6 @@
 
 .ep_release{
   display: flex;
-  background-color: rgba(0, 0, 0, 0);
   flex-direction: row;
   gap: 10px;
 }
@@ -117,7 +114,7 @@
 }
 
 .short_hover_desc{
-  height: auto;
+  margin: 10px 0;
 }
 
 .short_hover_desc p{
@@ -125,13 +122,13 @@
   line-height: 1.2;
   font-size: 13.5px;
   font-weight: 600;
-  padding: 10px 0;
   margin: 0;
 }
 
 .make_row{
   display:flex;
   flex-direction: row;
+  margin: 2px 0;
 }
 
 .component_name{
@@ -152,3 +149,62 @@
 }
 
 
+.action_cont{
+  margin: 7px 0;
+  height: auto ;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cont{
+  flex: 1;
+}
+
+
+.cont_one{
+  flex: 4;
+  padding-right: 5px;
+}
+
+.button_class{
+  background-color: var(--color-text);
+  color: var(--slighteer-light-grey);
+  width: 100%;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+}
+
+.button_class_text{
+  font-size: 12px;
+  letter-spacing: .5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button_class:hover{
+  background-color: var(--purple-lighter-color);
+  color: white;
+}
+
+
+.cont i{
+  color: var(--slighteer-light-grey);
+  background-color: rgb(117, 117, 117);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: space-around;
+  transition: all .3s ease-in-out;
+}
+
+.cont i:hover{
+  background-color: var(--color-text);
+}

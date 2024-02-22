@@ -21,7 +21,7 @@ function render_list() {
   const render_from = picked_data === true? top_anime_data : schuffle_data(top_anime_data);
 
   render_from.forEach((anime_elem, i) => {
-    if(i > 0) {
+    if(i > render_from.length - 1) {
       return;
     }
     const index = i + 1;
@@ -100,9 +100,23 @@ function render_list() {
             </div>
 
             <div class="action_cont">
-              <button href='${anime_elem.link_to_anime}' >Watch</button>
-              <i class="fa-solid fa-people-arrows"></i>
-              <i class="fa-solid fa-plus"></i>
+
+              <div class='cont_one'>
+                <div class='button_class' href=''>
+                  <p class='button_class_text'> 
+                   <i class="fa-solid fa-play"></i> Watch
+                  <p/>
+                 </div>
+              </div>
+              
+              <div class='cont'>
+                <i class="fa-solid fa-people-arrows fa-xl"></i>
+              </div>
+
+              <div class='cont'>
+                <i class="fa-solid fa-plus fa-xl"></i>
+              </div>
+              
             </div>
 
           </div>

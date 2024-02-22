@@ -6,6 +6,8 @@ body{
   --color-text: #AAAAAA;
   /*--color-white-icons: rgb(134, 134, 134);*/
   --color-white-icons: rgb(134, 134, 134);
+  --purple-color-effect: rgb(96, 0, 160);
+  --purple-lighter-color: rgb(133, 34, 199);
   background-color: var(--darker-main-color);
   color: #777;
   font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -38,6 +40,4 @@ body{
   .two_grids{
     grid-template-columns: 1fr; 
   }
-
-
 }
