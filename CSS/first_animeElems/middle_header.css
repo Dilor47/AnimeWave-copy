@@ -1,0 +1,69 @@
+#recent_updates{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.header_recent{
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+.cont_recent_updates{
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.cont_recent_updates span{
+  padding:1px 3px;
+  margin:1px 3px;
+  cursor: pointer;
+  color: var(--color-white-icons);
+  transition: color .2s ease-in-out;
+}
+
+.move_pages_cont{
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.move_pages_cont i{
+  font-size: 15px;
+  padding: 0 3px;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+.cont_recent_updates span:hover{
+  color: aliceblue;
+}
+
+.move_pages_cont .right:hover{
+  color: aliceblue;
+}
+
+.move_pages_cont .left:hover{
+  color: aliceblue;
+}
+
+.spec_sourse.focusedIs{
+  color: aliceblue;
+}
+
+@media screen and (max-width: 800px) {
+  #recent_updates{
+    display: block;
+  }
+
+  .header_recent{
+    margin-bottom: 5px;
+  }
+} 

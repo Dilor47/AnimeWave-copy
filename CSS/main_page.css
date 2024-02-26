@@ -12,6 +12,8 @@ body{
   font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+
+
 .two_grids{
   margin-top: 10px;
   height: 200vh;
@@ -22,13 +24,15 @@ body{
 
 .bigger_grid{
   grid-area: 1 / 1 / 2 / 2 ;
-  /*background-color: #252323;*/
+  padding-left: 60px;
+  padding-right: 10px;
   
 }
 
 .smaller_grid{
   grid-area: 1 / 2 / 2 / 3;
   color: var(--color-text);
+  padding-right: 60px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -40,3 +44,11 @@ body{
     grid-template-columns: 1fr; 
   }
 }
+
+
+@media screen and (max-width: 1700px) {
+  .smaller_grid{
+    padding: 0;
+  }
+}
+

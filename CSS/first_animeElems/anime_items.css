@@ -1,0 +1,37 @@
+#ani_elems{
+  background-color: black;
+  height: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.anime_item{
+  border: 1px solid rgb(0, 255, 34);
+  flex: 1;
+  min-width: 140px;
+  max-width: 205px;
+  max-height: 350px;
+  min-height: 250px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.anim{
+  border: 2px solid rgb(255, 0, 170);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.anim img{
+  max-width: 100%;
+  height: auto;
+}
+
+.info{
+  border: 2px solid rgb(119, 0, 255);
+}
