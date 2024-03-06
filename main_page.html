@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="CSS/on_screen_header.css/drop_down_end.css">
     <link rel="stylesheet" href="CSS/carousel.css">
     <link rel="stylesheet" href="CSS/social_media.css">
-    <link rel="stylesheet" href="CSS/anime_top_lists/ranking_anime.css">
-    <link rel="stylesheet" href="CSS/anime_top_lists/anime_tops_components.css">
-    <link rel="stylesheet" href="CSS/anime_details_hover.css" >
-    <link rel="stylesheet" href="CSS/first_animeElems/middle_header.css" >
-    <link rel='stylesheet' href='CSS/first_animeElems/anime_items.css' >
+    <link rel="stylesheet" href="CSS/top_anime/ranking_anime.css">
+    <link rel="stylesheet" href="CSS/top_anime/anime_tops_components.css">
+    <link rel="stylesheet" href="CSS/hover_popUPs_style.css" >
+    <link rel="stylesheet" href="CSS/recently_updated/middle_header.css" >
+    <link rel="stylesheet" href='CSS/recently_updated/anime_items.css' >
+    <link rel="stylesheet" href="CSS/settings_meta.css" >
     
 
 
@@ -32,17 +33,17 @@
 
         <div class="dropdown">
           <div class="drop_btn js_dropDown" tabindex="0">
-            <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-2xl"></i> 
+            <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-xl" style="font-size: 30px" ></i> 
           </div>
           <div id="dropDown_list" class="dropDown_content">
-            <a href="#">Home</a>
+            <a href="#" class="first">Home</a>
             <a href="#">Genre</a>
             <a href="#">Types</a>
             <a href="#">Newest</a>
             <a href="#">Updated</a>
             <a href="#">Ongoing</a>
             <a href="#">Added</a>
-            <a href="#">Request</a>
+            <a href="#" class="last">Request</a>
           </div>
 
         </div>
@@ -115,7 +116,7 @@
         
 
         <div id="profile_menu">
-          <i id="dropDown_end" tabindex="0" class="tooltip_options fa-solid fa-sliders fa-2xl"></i>
+          <i id="dropDown_end" tabindex="0" class="tooltip_options fa-solid fa-sliders fa-xl"></i>
 
           <div class="container_profile" tabindex="0">
             <a href="#"><i class="symbol fa-solid fa-user"></i>Profile</a>
@@ -177,14 +178,32 @@
         <div id="ani_elems">
 
           <div class="anime_item">
+            
             <div class="anim">
               <img src="images/try.jpg" >
               <div class="meta">
-                Some info
+
+                <div class="meta_elems">
+                  <div class="ep_subhov">
+                    <i class="ep_subhov_amount fa faElem">12</i>
+                  </div>
+                  <div class="ep_michov">
+                    <i class="ep_michov_amount fa faElem">12</i>
+                  </div>
+                  <div class="ep_episodeshov">
+                    <i class="ep_episodeshov_amount fa faElem">12</i>
+                  </div>
+                </div>
+
+                <div class="watch_to_Elm">
+                  <i class='type_anime_Elm'>OVA</i>  
+                </div>
+
               </div>
+
             </div>
-            <div class="info">
-              Demon Slayer: Kimetsu no Yaiba
+            <div class="info"> 
+              Demon Slayer: Kimetsu no Yaiba Demon Slayer: Kimetsu no Yaiba er: Kimetsu no Yaiba
             </div>
           </div>
 
@@ -196,7 +215,7 @@
               </div>
             </div>
             <div class="info">
-              Demon Slayer: Kimetsu no Yaiba
+              Demon Slayer
             </div>
           </div>
 

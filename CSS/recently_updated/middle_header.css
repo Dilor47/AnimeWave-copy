@@ -42,19 +42,10 @@
   transition: color .2s ease-in-out;
 }
 
-.cont_recent_updates span:hover{
-  color: aliceblue;
-}
-
-.move_pages_cont .right:hover{
-  color: aliceblue;
-}
-
-.move_pages_cont .left:hover{
-  color: aliceblue;
-}
-
-.spec_sourse.focusedIs{
+.cont_recent_updates span:hover,
+.move_pages_cont .right:hover,
+.move_pages_cont .left:hover,
+.spec_sourse.focusedIs {
   color: aliceblue;
 }
 
