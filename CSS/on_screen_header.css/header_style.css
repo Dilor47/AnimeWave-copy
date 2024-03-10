@@ -1,8 +1,4 @@
 body {
-  /*
-  margin: 0;
-  padding: 0;
-  */
   font-family: 'Noto Sans JP', sans-serif;
   --main-color: rgb(26, 25, 25);
   --hover-header-color: rgb(151, 101, 192);
@@ -20,70 +16,154 @@ body {
 }
 
 .on_screen_header {
-  z-index: 3;
-  background-color: var(--main-color);
+  z-index: 2;
   width: 100%;
   max-width: 1780px;
   margin: 0 auto;
   justify-content: center;
-  height: 75px;
+  height: 70px;
   display: flex;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
   align-items: center;
 } 
 
+.split_partOne,
+.split_partTwo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.split_partOne{
+  flex: 0 2 78%;
+}
+.split_partTwo{
+  flex: 0 1 auto;
+}
+
 
 .image_of_site {
-  flex: 1 0 auto;
-  padding: 10px;
-  padding-right: 5px;
+  width: auto;
+  margin: 0 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
 .image_of_site img{
-  max-width: 150px;
-  min-height: 45px;
+  width: 140px;
 }
 
+/*
 .search_container{
   background-color: var(--darker-main-color);
   color: var(--color-white-icons);
-  width: auto;
-  height: 40px;
+  display: flex;
+  
+  flex: 1 1 600px;
+  height: 36px;
   padding: 5px;
   border-radius: 5px;
-  flex: 1 3 550px;
-  display: flex;
   align-items: center;
+  z-index: 5;
+}
+*/
+.search_container{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 600px;
+  height: auto;
+  padding: 5px;
+  border-radius: 5px;
+  /*margin-top: 100px;*/
+  z-index: 5;
 }
 
+.active_search{
+  display: none;
+}
+
+.constant_search{
+  background-color: var(--darker-main-color);
+  color: var(--color-white-icons);
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  z-index: 5;
+}
 
 .style_search {
+  width: 75%;
   background-color: transparent;
   color: var(--color-white-icons);
-  padding: 10px;
-  font-size: 23px;
+  font-size: 15px;
   border: none;
   outline: none;
+  font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-weight: 500;
+  cursor: default;
+  cursor: text;
+}
+
+input[type="text"] {
+  text-align: start;
 }
 
 .style_search::placeholder{
-  color: var(--color-white-icons);
+  color: rgb(95, 95, 95);
+  font-size: 15px;
 }
 
 .search-sign{
-  font-size: 19px;
+  font-size: 18px;
   padding: 10px;
+  transition: all .3s ease-in-out;
   cursor: pointer;
+}
+
+.quick_access{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 15px;
+  color: rgb(95, 95, 95);
+  cursor: default;
+}
+
+.quick_access i{
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text_q{
+  height: 100%;
+  align-items: center;
+  padding: 0 5px;
+  cursor: default;
+  white-space: nowrap;
+  cursor:text;
 }
 
 .search-sign:hover{
   color: var(--hover-header-color);
-  font-weight: bold;
 }
 
-.style_search:focus{
-  border: none;
+
+.cool_stuff{
+  margin-left: 5px;
+  flex: 1 1 auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .together_watch,
@@ -91,50 +171,29 @@ body {
 .read,
 .message,
 .change_lang{
-  flex: 2 0 150px;
-  padding: 0 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
   color: var(--color-white-icons);
   text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 5px;
+  font-size: 16px;
   transition: .4s;
-  background-color: rgba(255, 10, 10, 0);
   text-decoration: none;
   position: relative;
 }
 
-.together_watch{
-  flex: 0 1 200px;
-}
-
-
-.random_select{
-  flex: 0 1 150px;
-}
-
-.read{
-  flex: 0 1 170px;
-}
-
-.change_lang{
-  flex: 0 1 50px;
-}
-
-.message{
-  flex: 1 1 50px;
-  cursor: auto;
-}
-
-
 .together_watch::after{
   content: "Watch2gether";
+  padding: 5px;
 }
 .random_select::after{
   content: "Random";
+  padding: 5px;
 }
 .read::after{
   content: "Read Manga";
+  padding: 5px;
 }
 
 .together_watch:hover,
@@ -144,32 +203,11 @@ body {
   color: var(--hover-header-color);
 }
 
-.message{
-  font-size: 15px;
-}
-
-.free_space{
-  display: flex;
-  justify-content: center;
-  flex: 0 10 150px;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.cool_stuff{
-  flex: 5 1 auto;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-
-
 
 .change_lang{
   height: auto;
   width: auto;
-  border-radius: 0px;
+  cursor: pointer;
 }
 
 .choose{
@@ -178,7 +216,6 @@ body {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  flex: 1;
   border: 2px solid var(--header-border-color);
 }
 
@@ -201,16 +238,11 @@ body {
   border-right: 2px solid var(--header-border-color);
 }
 
-.en.active{
-  background-color: var(--color-white-icons);
-  color: black;
-}
-
+.en.active,
 .jp.active{
   background-color: var(--color-white-icons);
   color: black;
 }
-
 
 
 .extra_2watch,
@@ -229,7 +261,7 @@ body {
   transition: transform .1s ease-out 0.1s;
   transform-origin: top;
   letter-spacing: 0.05em;
-  z-index: 5;
+  z-index: 4;
 }
 
 .triangle{
@@ -247,11 +279,7 @@ body {
 }
 
 
-.extra_2watch.active{
-  transform: translateX(-50%) scaleY(1);
-}
-
-
+.extra_2watch.active,
 .random_choice.active{
   transform: translateX(-50%) scaleY(1);
 }
@@ -262,19 +290,19 @@ body {
 .menu_message{
   position: absolute;
   background-color: var(--color-lang-message);
-  width: 350px;
-  height: 95px;
-  top: 40px;
+  width: 300px;
+  height: 80px;
+  top: 27px;
   left: 100%;
   transform: translateX(-100%) scaleY(0);
   border-radius: 9px;
   display: flex;
   flex-direction: column;
-  cursor: auto;
+  cursor: default;
   border: 1px solid var(--header-border-lighter);
   transform-origin: top;
   transition: .1s ease-in-out;
-  z-index: 5;
+  z-index: 4;
 }
 
 .menu_message.active{
@@ -288,6 +316,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
+  font-size: 15px;
 }
 
 .message_header{
@@ -322,13 +351,13 @@ body {
 
 .anime_title::after{
   content: '';
-  background-color: rgb(153, 156, 160);
+  background-color: rgb(132, 132, 132);
   width: 50px;
   height: 1px;
   display: inline-block;
   position: absolute;
   left: 50%;
-  top: 170%;
+  top: 155%;
   transform: translate(-50%, -200%);
   cursor: pointer;
 }
@@ -336,8 +365,13 @@ body {
 
 .notifications{
   color: var(--text-in-shadow);
-  font-size: 18px;
+  
 }
+
+.notifications span{
+  cursor: text;
+}
+
 
 .mark_add:hover{
   color: var(--color-white-icons);
@@ -348,10 +382,10 @@ body {
   cursor: pointer;
 }
 
+
+
+
 @media screen and (max-width: 1600px) {
-  .free_space{
-    display: none;
-  }
   .search_container{
     flex: 1 3 400px;
   }

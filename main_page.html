@@ -31,101 +31,119 @@
     <div class="on_screen_header_cont">
       <div class="on_screen_header">
 
-        <div class="dropdown">
-          <div class="drop_btn js_dropDown" tabindex="0">
-            <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-xl" style="font-size: 30px" ></i> 
+        <div class="split_partOne">
+          <div class="dropdown">
+            <div class="drop_btn js_dropDown" tabindex="0">
+              <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-xl" style="font-size: 30px" ></i> 
+            </div>
+            <div id="dropDown_list" class="dropDown_content">
+              <a href="#" class="first">Home</a>
+              <a href="#"><span>Genre</span></a>
+              <a href="#"><span>Types</span></a>
+              <a href="#"><span>Updated</span></a>
+              <a href="#"><span>Ongoing</span></a>
+              <a href="#"><span>Added</span></a>
+              <a href="#" class="last"><span>Request</span></a>
+            </div>
+
           </div>
-          <div id="dropDown_list" class="dropDown_content">
-            <a href="#" class="first">Home</a>
-            <a href="#">Genre</a>
-            <a href="#">Types</a>
-            <a href="#">Newest</a>
-            <a href="#">Updated</a>
-            <a href="#">Ongoing</a>
-            <a href="#">Added</a>
-            <a href="#" class="last">Request</a>
+
+          <div class="image_of_site">
+            <a href="main_page.html">
+              <img class="image_style" src="../images/logo.png">
+            </a>
           </div>
 
-        </div>
-
-        <div class="image_of_site">
-          <a href="main_page.html">
-            <img class="image_style" src="../images/logo.png">
-          </a>
-        </div>
-
-        <div class="search_container">
-          <i class="search-sign fa-solid fa-magnifying-glass fa-fade"></i>
-              <input class="style_search" type="text" placeholder="Search Anime...">
-            </i>
-        </div>
-
-
-        <div class="cool_stuff">
-
-          <a class="together_watch js_2gether" data-class="extra_2watch" href="main_page.html">
-            <i class="fa-solid fa-user-group fa-lg"></i>
-            <div class="extra_2watch">
-              <div>Watch with friends</div>
-              <div class="triangle"></div>
+          <form method="get" class="search_container">
+            <div class="constant_search">
+              <i class="search-sign fa-solid fa-magnifying-glass"></i>
+                <input class="style_search" type="text" placeholder="Search Anime...">
+                <span class="quick_access" > 
+                  <i class="fa-brands fa-strava"></i> 
+                  <span class="text_q">Quich Access</span>
+                </span>
+              </i>
             </div>
             
-          </a>
-          
-
-          <a class="random_select js_random" data-class="random_choice" href="main_page.html">
-            <i class="fa-solid fa-shuffle fa-lg"></i>
-            <div class="random_choice">
-              <div>Watch a random anime</div>
-              <div class="triangle"></div>
-            </div
-          </a>
-
-          <a class="read js_read" href="main_page.html">
-            <i class="fa-solid fa-book fa-lg"></i>      
-          </a>
-
-          <div class="change_lang">
-            <div class="choose">
-              <span class="en active">EN</span>
-              <span class="jp">JP</span>
+            <div class="active_search">
+              <div class="first_guide">
+                <span>Anime</span>
+                <div>
+                  <i class="fa-solid fa-filter"></i>
+                  <span>Filter</span>
+                </div>
+              </div>
+              <div class="second_guide"></div>
             </div>
-          </div>
 
-          <div class="free_space"></div>
-        </div>
+          </form>
 
-      
 
-        <div class="message" tabindex="0">
-          <i class="bell fa-regular fa-bell fa-xl"></i>
-          <div class="menu_message" tabindex="0">
-            <div class="message_header">
-              <span class="anime_title">Anime</span>
-              <span></span>
-              <div class="mark">
-                <i class="mark_add fa-solid fa-circle-check"></i>
+          <div class="cool_stuff">
+
+            <a class="together_watch js_2gether" data-class="extra_2watch" href="main_page.html">
+              <i class="fa-solid fa-user-group fa-lg"></i>
+              <div class="extra_2watch">
+                <div>Watch with friends</div>
+                <div class="triangle"></div>
               </div>
               
+            </a>
+            
+
+            <a class="random_select js_random" data-class="random_choice" href="main_page.html">
+              <i class="fa-solid fa-shuffle fa-lg"></i>
+              <div class="random_choice">
+                <div>Watch a random anime</div>
+                <div class="triangle"></div>
+              </div
+            </a>
+
+            <a class="read js_read" href="main_page.html">
+              <i class="fa-solid fa-book fa-lg"></i>      
+            </a>
+
+            <div class="change_lang">
+              <div class="choose">
+                <span class="en active">EN</span>
+                <span class="jp">JP</span>
+              </div>
             </div>
-            <div class="notifications">
-              <div>There is no notification</div>
-            </div>  
           </div>
+
         </div>
-        
 
-        <div id="profile_menu">
-          <i id="dropDown_end" tabindex="0" class="tooltip_options fa-solid fa-sliders fa-xl"></i>
+        <div class="split_partTwo">
+          <div class="message" tabindex="0">
+            <i class="bell fa-regular fa-bell fa-xl"></i>
+            <div class="menu_message" tabindex="0">
+              <div class="message_header">
+                <span class="anime_title">Anime</span>
+                <span></span>
+                <div class="mark">
+                  <i class="mark_add fa-solid fa-circle-check"></i>
+                </div>
+                
+              </div>
+              <div class="notifications">
+                <span>There is no notification</span>
+              </div>  
+            </div>
+          </div>
+          
 
-          <div class="container_profile" tabindex="0">
-            <a href="#"><i class="symbol fa-solid fa-user"></i>Profile</a>
-            <a href="#"><i class="symbol fa-solid fa-arrow-rotate-right"></i>Continue Watching</a>
-            <a href="#"><i class="symbol fa-solid fa-bookmark"></i>Watch List</a>
-            <a href="#"><i class="symbol fa-regular fa-bell"></i>Notification</a>
-            <a href="#"><i class="symbol fa-solid fa-file-import"></i> List Import</a>
-            <a href="#"><i class="symbol fa-solid fa-gear"></i>Setting</a>
-            <a href="#" class="symbol_spec"><i class="symbol fa-solid fa-right-from-bracket"></i>Logout</a>
+          <div id="profile_menu">
+            <i id="dropDown_end" tabindex="0" class="tooltip_options fa-solid fa-sliders fa-xl"></i>
+
+            <div class="container_profile" tabindex="0">
+              <a href="#"><i class="symbol fa-solid fa-user"></i>Profile</a>
+              <a href="#"><i class="symbol fa-solid fa-arrow-rotate-right"></i>Continue Watching</a>
+              <a href="#"><i class="symbol fa-solid fa-bookmark"></i>Watch List</a>
+              <a href="#"><i class="symbol fa-regular fa-bell"></i>Notification</a>
+              <a href="#"><i class="symbol fa-solid fa-file-import"></i> List Import</a>
+              <a href="#"><i class="symbol fa-solid fa-gear"></i>Setting</a>
+              <a href="#" class="symbol_spec"><i class="symbol fa-solid fa-right-from-bracket"></i>Logout</a>
+            </div>
           </div>
         </div>
 
