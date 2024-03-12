@@ -54,10 +54,10 @@
             </a>
           </div>
 
-          <form method="get" class="search_container">
-            <div class="constant_search">
+          <form method="get" id="search_cont" class="search_container" tabindex='0' >
+            <div class="const_search">
               <i class="search-sign fa-solid fa-magnifying-glass"></i>
-                <input class="style_search" type="text" placeholder="Search Anime...">
+                <input id="search_box" class="style_search" type="text" placeholder="Search Anime..." autocomplete="off"">
                 <span class="quick_access" > 
                   <i class="fa-brands fa-strava"></i> 
                   <span class="text_q">Quich Access</span>
@@ -73,7 +73,7 @@
                   <span>Filter</span>
                 </div>
               </div>
-              <div class="second_guide"></div>
+              <div class="second_guide">s</div>
             </div>
 
           </form>
@@ -398,6 +398,7 @@
     <script src="JS/header.js"></script>
     <script src="JS/dropDown_menues/dropDown_start.js"></script>
     <script src="JS/dropDown_menues/dropDown_end.js"></script>
+    <script src="JS/dropDown_menues/search_logic.js" ></script>
     <script type="module" src="JS/carousel.js"></script>
     <script src="JS/little_grid.js"></script>
     <script src="JS/anime_tops.js" type="module"></script>
