@@ -13,7 +13,6 @@ const active_part = document.querySelector('.active_search');
   });
 
   elem.addEventListener('focusout', (e) => {
-    /*search_box.onfocus();*/
     if(active_part.classList.contains('on')) {
       active_part.classList.remove('on');
     }
