@@ -1,11 +1,12 @@
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  --main-color: rgb(26, 25, 25);
+  --main-color: #1c1c1c;
   --hover-header-color: rgb(151, 101, 192);
   --color-lang-message: rgb(35, 37, 37);
   --header-border-color: rgb(24, 21, 21);
   --header-border-lighter: rgb(56, 55, 55);
   --text-in-shadow: rgb(114, 114, 114);
+  --search-border: rgb(46, 46, 46);
 }
 
 .on_screen_header_cont{
@@ -79,7 +80,6 @@ body {
   flex: 1 1 600px;
   height: auto;
   padding: 0;
-  border-bottom: 1px solid white;
 }
 
 
@@ -99,53 +99,85 @@ body {
 
 
 .active_search{
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 5px;
-  transform: scaleY(1);
+  transform: scaleY(0);
   width: 100%;
   height: auto;
+  min-height: 200px;
   z-index: 1;
   transition:all .2s ease-in-out;
   transform-origin: top;
-}
-
-active_search.on{
-  border: 1px solid white;
-  transform: scaleY(1);
-  background-color: rgba(181, 0, 88, 0.988);
-  height: 200px;
+  border: 1px solid var(--search-border);
   border-radius: 5px;
+  background-color: var(--darker-main-color);
 }
 
-clear_textSearch{
-  background-color: aqua;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: auto;
-  height: 20px;
-  color: black;
-  display: flex;
-  align-items: flex-end;
-}
-
-first_guide{
-  margin-top: 40px;
-  background-color: rgb(13, 255, 0);
-  height: 50px;
-}
-
-second_guide{
-  background-color: aqua;
+.active_search.on{
+  padding-top: 36px;
+  transform: scaleY(1);
   height: auto;
+  visibility:visible;
 }
 
+.head_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 36px;
+  padding: 10px 15px 0px;
+  color: #aaa;
+  border-bottom: 1px solid var(--search-border);
+  box-sizing: border-box;
+}
+
+.header_title,
+.action{
+  box-sizing: content-box;
+  padding-bottom: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header_title{
+  margin-right: 8px;
+  position: relative;
+}
+
+.header_title:after{
+  content: '';
+  height: 1px;
+  width: 41.63px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: white;
+}
+
+
+.action{
+  color:#aaaa;
+  transition: color .2s ease-in-out;
+  margin-left: 8px;
+}
+
+.action:hover{
+  color: #aaa;
+}
+
+.bottom_guide{
+  background-color: rgb(255, 0, 98);
+}
+ 
 
 .style_search {
-  width: 75%;
-  z-index: 100;
+  width: 100%;
+  margin-right: 20px;
+  z-index: 5;
   background-color: transparent;
   color: var(--color-white-icons);
   font-size: 15px;
@@ -171,16 +203,51 @@ input[type="text"] {
   padding: 10px;
   transition: all .3s ease-in-out;
   cursor: pointer;
+  z-index: 5;
+  color: #aaaa;
+}
+
+.clearText{
+  box-sizing: border-box;
+  padding-right: 10px;
+  background-color: var(--darker-main-color);
+  width: 120px;
+  height: 30px;
+  align-self: flex-end;
+  z-index: 5;
+  text-align: end;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.clearText span {
+  color: rgb(95, 95, 95);
+  transition: all .2s ease-in-out;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+.clearText span:hover{
+  color: #aaa;
 }
 
 .quick_access{
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
+  width: 120px;
   font-size: 15px;
   color: rgb(95, 95, 95);
   cursor: default;
+  /*border: 1px solid white;*/
 }
 
 .quick_access i{
@@ -191,6 +258,7 @@ input[type="text"] {
 }
 
 .text_q{
+  display: flex;
   height: 100%;
   align-items: center;
   padding: 0 5px;
@@ -200,7 +268,7 @@ input[type="text"] {
 }
 
 .search-sign:hover{
-  color: var(--hover-header-color);
+  color: #aaa;
 }
 
 
@@ -436,10 +504,20 @@ input[type="text"] {
   .search_container{
     flex: 1 3 400px;
   }
+  .quick_access{
+    padding: 0 5px;
+  }
+  .text_q{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  
 }
 
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .search_container{
     display:none;
   }
