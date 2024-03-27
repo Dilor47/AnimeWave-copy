@@ -1,12 +1,20 @@
 import {anime_description} from '../data/info_to_carousel.js'
 
 const carousel = document.querySelector('.main-carousel');
+/*linear-gradient(to right,  rgb(0, 0, 0), ${element.background}, rgb(0, 0, 0)); */
 
 let carousel_html = '';
 
 anime_description.forEach((element) => {
   carousel_html += `
-  <div class="carousel-cell" style="background: linear-gradient(to right,  rgb(0, 0, 0), ${element.background}, rgb(0, 0, 0));" >
+  <div class="carousel-cell" style="background: linear-gradient(to right,  #131313,
+  #131313,  
+  ${element.background},
+  #131313, 
+  #131313, 
+  #131313, 
+  #131313);" >
+
     <div class="descr">
       <div class="all_info_anime">
         <h1>

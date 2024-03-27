@@ -22,8 +22,9 @@ body{
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(209, 4, 65), rgb(0, 0, 0));
   position: relative;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1780px;
   margin: 0 auto;
+  margin-top: 70px;
   justify-content: center;
 }
 
@@ -215,6 +216,7 @@ body{
     position: absolute;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.945), rgba(255, 255, 255, 0));
     z-index: -2;
+
   }
 
 
@@ -229,6 +231,10 @@ body{
   }
   .middle_text_length{
     display: flex;
+  }
+
+  .main-carousel{
+    margin-top: 60px;
   }
 }
 
