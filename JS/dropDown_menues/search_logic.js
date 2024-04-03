@@ -1,248 +1,149 @@
 const search_cont = document.getElementById('search_cont');
+
 const search_box = document.getElementById('search_box');
+const search_below = document.getElementById('support_search');
 
 const active_part = document.querySelector('.active_search');
 const content = document.querySelector('.bottom_search_cont');
-const trigger = document.getElementById('trigger');
-const search_below = document.getElementById('support_search');
+const trigger_button = document.getElementById('trigger');
+const lens_trigger = document.getElementById('main_seach_sign');
+const search_lens = document.getElementById('search_lens');
 
-trigger.addEventListener('click', () => {
-  const event = new Event('focusin', {
-    bubbles: true
-  });
+const search_below_cont = document.getElementById('below_search_cont');
 
+lens_trigger.addEventListener('click', () => {
+  search_box.focus();
+});
+
+search_lens.addEventListener('click', () => {
+  search_below.focus();
+});
+
+
+trigger_button.addEventListener('click', () => {
   if(!content.classList.contains('on')) {
-    active_part.classList.add('on');
     content.classList.add('on');
-    search_below.dispatchEvent(event);
-    /*search_box.focus();*/
-    console.log('Made');
-    console.log(document.activeElement);
+    search_below.focus();
   } else {
-    active_part.classList.remove('on');
     content.classList.remove('on');
+    clear_text();
+    toggleSearchContainer();
   }
+});
 
-})
+
+search_below_cont.addEventListener('focusin', () => {
+  toggleSearchContainer();
+});
 
 search_below.addEventListener('focusin', () => {
-  console.log('FOCUSED!');
+  toggleSearchContainer();
+});
+
+
+search_below.addEventListener('blur', (e) => {
+  if(e.relatedTarget !== search_below_cont && e.relatedTarget !== trigger_button) {
+    content.classList.remove('on');
+    clear_text();
+    toggleSearchContainer();
+  }
+
+});
+
+
+search_below_cont.addEventListener('blur', (e) => {
+  if(e.relatedTarget !== search_below) {
+    content.classList.remove('on');
+    clear_text();
+    toggleSearchContainer();
+  }
 })
 
-search_below.addEventListener('focusout', () => {
-  console.log('UN-FOCUSED!');
-  active_part.classList.remove('on');
-  content.classList.remove('on');
-})
+
+function clear_text() {
+  search_below.value = '';
+  search_box.value = '';
+}
+
 
 search_box.addEventListener('focusin', (event) => {
   // When focusin event occurs on search_cont, focus the search_box
   if (!active_part.classList.contains('on')) {
     active_part.classList.add('on');
-    content.classList.add('on');
+    toggleSearchContainer();
+    console.log('FOCUSED search_box');
   }
 });
 
-search_cont.addEventListener('blur', (event) => {
-  if(active_part.classList.contains('on')) {
-    active_part.classList.remove('on');
-    content.classList.remove('on');
-  }
-});
-/*
-const focusInEvent = new Event('focusin', {
-  bubbles: true, // Make sure it bubbles up through the DOM
-  cancelable: true // Make sure it's cancelable
-});
-
-function toggleSearchContainer() {
-  console.log('doing');
-  let searchContainerWasActive;
-  if (window.innerWidth >= 1200) {
-    // Remember if search container was active before hiding it
-    searchContainerWasActive = active_part.classList.contains('on');
-    // Hide search container for smaller screens
-  } else {
-    // Show search container for larger screens
-    if (searchContainerWasActive) {
-      active_part.classList.add('on');
-      /*search_box.focus();*/
-      /*
-      search_box.dispatchEvent(focusInEvent);
-      console.log('AddedD');
-    }
-  }
-}
-
-// Initial call to set initial state
-toggleSearchContainer();
-
-// Event listener to handle screen size changes
-window.addEventListener('resize', toggleSearchContainer);
-
-
-*/
-
-
-/* Main search */
-/*
-const search_focus = document.getElementById('search_cont');
-const search_box = document.getElementById('search_box');
-const active_part = document.querySelector('.active_search');
-const content = document.querySelector('.bottom_search_cont')
-const trigger = document.getElementById('trigger');
-
-const array_events = [search_focus, search_box];
-// Function to handle focus
-function handleFocus() {
-  search_box.focus();
-  if (!active_part.classList.contains('on')) {
-      console.log('It was focused!');
-      active_part.classList.add('on');
-      content.classList.add('on');
-  }
-}
-
-// Add event listener for focusin
-array_events.forEach((elem) => {
-  elem.addEventListener('focusin', handleFocus);
-});
-
-// Add event listener for focusout
-document.addEventListener('focusout', (event) => {
-  const focusedElement = event.relatedTarget || document.activeElement;
-  if (!focusedElement || !focusedElement.closest('.array_events')) {
-      // Perform actions to remove focus styling
-      active_part.classList.remove('on');
-      content.classList.remove('on');
-  }
-});
-
-// Add event listener for window resize
-window.addEventListener('resize', () => {
-  console.log(document.activeElement);
-  // Check if array_events element is focused
-  const isFocused = array_events.some(elem => elem === document.activeElement);
-  if (isFocused) {
-      handleFocus();
-  }
-
-  let searchContainerWasActive = false;
-
-  if (window.innerWidth >= 1200) {
-    // Remember if search container was active before hiding it
-    searchContainerWasActive = active_part.classList.contains('on');
-    // Hide search container for smaller screens
-  } else {
-    // Show search container for larger screens
-    if (searchContainerWasActive) {
-      active_part.classList.add('on');
-      search_focus.focus();
-      search_box.focus();
-      console.log('AddedD');
-    }
-  }
-});
-
-
-
-/*
-array_events.forEach((elem) => {
-  elem.addEventListener('focus', (e) => {
-    search_box.focus();
-    if(!active_part.classList.contains('on')) {
-      console.log('It was focused!');
-      active_part.classList.add('on');
-      content.classList.add('on');
-    }
-  });
-
-  elem.addEventListener('focusout', (e) => {
-    if(active_part.classList.contains('on')) {
-      console.log('It was UNfocused!');
-      active_part.classList.remove('on');
-      content.classList.remove('on');
-    }
-    
-  });
-});
-
-
-
-console.log(active_part.classList.contains('on'));
-
-const searchContainer = document.querySelector('.search_container');
-let searchContainerWasActive = false;
-
-// Function to toggle search container based on screen width
-function toggleSearchContainer() {
-  console.log('doing');
-  if (window.innerWidth >= 1200) {
-    // Remember if search container was active before hiding it
-    searchContainerWasActive = active_part.classList.contains('on');
-    // Hide search container for smaller screens
-  } else {
-    // Show search container for larger screens
-    if (searchContainerWasActive) {
-      active_part.classList.add('on');
-      search_focus.focus();
-      search_box.focus();
-      console.log('AddedD');
-    }
-  }
-}
-
-// Initial call to set initial state
-toggleSearchContainer();
-
-// Event listener to handle screen size changes
-window.addEventListener('resize', toggleSearchContainer);
-
-/* Search when screen get small 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// active_part = to find out was active search closed or not
-
-
-trigger.addEventListener('click', () => {
-  if(active_part.classList.contains('on')) {
-    active_part.classList.remove('on');
-  } else {
-    console.log('Npope');
-    
-  }
+search_cont.addEventListener('focusin', () => {
+  console.log('FOCUSED search_cont');
+  toggleSearchContainer();
 })
 
-*/
+search_cont.addEventListener('focusout', (event) => {
+  if(event.relatedTarget !== search_cont && active_part.classList.contains('on')) 
+    active_part.classList.remove('on');
+    clear_text();
+    //toggleSearchContainer();
+    console.log('toggleSearchContainer() in use with ONFOCUSED: search_cont');
+  });
+
+search_box.addEventListener('blur', (event) => {
+  if(event.relatedTarget !== search_cont  && active_part.classList.contains('on')) {
+    active_part.classList.remove('on');
+    clear_text();
+    //toggleSearchContainer();
+    console.log('toggleSearchContainer() in use with ONFOCUSED: search_box');
+  }
+});
+
+
+//The logic of search resizing between > 1200  and < 1200 innerWidth!
+
+let searchContainerWasActiveIn;
+let searchContainerWasActiveOut;
+
+let prevFocusIn;
+let prevFocusOut;
+
+let prevInputBefIn;
+let prevInputBefOut;
+
+
+export function toggleSearchContainer() {
+  //console.log('Doing');
+
+
+  window.innerWidth < 1200? searchContainerWasActiveOut = content.classList.contains('on') : '';
+  window.innerWidth < 1200? prevFocusOut = (document.activeElement === search_below) : '';
+  window.innerWidth < 1200? prevInputBefOut = search_below.value : '';
+
+  window.innerWidth > 1200? searchContainerWasActiveIn = active_part.classList.contains('on'): '';
+  window.innerWidth > 1200? prevFocusIn = (document.activeElement === search_box): '';
+  window.innerWidth > 1200? prevInputBefIn = search_box.value : '';
+
+  if(window.innerWidth > 1200 && searchContainerWasActiveOut) {
+    active_part.classList.add('on');
+    content.classList.remove('on');
+    prevFocusOut? search_box.focus() : '';
+    search_box.value = prevInputBefOut;
+    searchContainerWasActiveOut = false;
+    console.log('Once done', searchContainerWasActiveOut);
+  }
+
+  if(window.innerWidth < 1200 && searchContainerWasActiveIn) {
+    content.classList.add('on');
+    active_part.classList.remove('on');
+    prevFocusIn? search_below.focus() : '';
+    search_below.value = prevInputBefIn;
+    searchContainerWasActiveIn = false;
+    console.log('Second done', searchContainerWasActiveIn);
+  }
+}
+
+// Initial call to set initial state
+toggleSearchContainer();
+
+
+// Event listener to handle screen size changes
+window.addEventListener('resize', toggleSearchContainer);

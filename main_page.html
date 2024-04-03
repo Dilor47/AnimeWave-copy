@@ -34,7 +34,7 @@
 
         <div class="split_partOne">
           <div class="dropdown">
-            <div class="drop_btn js_dropDown" tabindex="0">
+            <div id="toggle_menu" class="drop_btn js_dropDown" tabindex="0">
               <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-xl"></i> 
             </div>
             <div id="dropDown_list" class="dropDown_content">
@@ -57,15 +57,16 @@
 
           <form method="get" id="search_cont" class="search_container" tabindex='0' >
             <div class="const_search">
-              <i class="search-sign fa-solid fa-magnifying-glass"></i>
+              <i id="main_seach_sign" id class="search-sign fa-solid fa-magnifying-glass"></i>
               <input id="search_box" class="style_search" type="text" placeholder="Search Anime..." autocomplete="off" value="" >
-              <span class="quick_access" > 
+
+              <span class="quick_access" >
                 <i class="fa-brands fa-strava"></i> 
                 <span class="text_q">Quich Access</span>
               </span>
 
               <div class="active_search">
-                <div onclick="alert('Works')" class="clearText">
+                <div class="clearText">
                   <span>Clear</span>
                 </div>
                 <div class="inner_cont">
@@ -143,7 +144,7 @@
         </div>
 
         <div class="split_partTwo">
-          <div id="trigger" class="little_search">
+          <div id="trigger" class="little_search" tabindex="0">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
 
@@ -185,10 +186,10 @@
         </div>
       </div>
 
-      <form class="bottom_search_cont">
+      <form id="below_search_cont" class="bottom_search_cont" tabindex="0" >
         <span class="bottom_search">
           <input id="support_search" type="text" value="" placeholder="Search Anime..." autocomplete="off">
-          <i class="fa-solid fa-magnifying-glass" href="#"></i>
+          <i id="search_lens" class="fa-solid fa-magnifying-glass" href="#"></i>
         </span>
 
         <div class="foot_bottom_search">
@@ -459,8 +460,8 @@
     <script src="JS/header.js"></script>
     <script src="JS/dropDown_menues/dropDown_start.js"></script>
     <script src="JS/dropDown_menues/dropDown_end.js"></script>
-    <script src="JS/dropDown_menues/search_logic.js" ></script>
-    <script src="JS/input_logic.js"></script>
+    <script type="module" src="JS/dropDown_menues/search_logic.js" ></script>
+    <script type="module" src="JS/input_logic.js"></script>
     <script type="module" src="JS/carousel.js"></script>
     <script src="JS/little_grid.js"></script>
     <script src="JS/anime_tops.js" type="module"></script>

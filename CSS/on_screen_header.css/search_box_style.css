@@ -278,6 +278,7 @@ input[type="text"] {
   box-sizing:border-box;
   width: 100%;
   padding-top: 5px;
+  outline: none;
 }
 
 .bottom_search{
