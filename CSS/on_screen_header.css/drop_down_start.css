@@ -2,7 +2,7 @@
 .drop_btn{
   color: white;
   cursor: pointer;
-  width: 70px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,3 +85,9 @@
   transition: all .4s ease;
 }
 
+
+@media screen and (max-width: 1500px) {
+  #dropDown_list{
+    top: 52px;
+  }
+}

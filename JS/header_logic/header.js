@@ -31,17 +31,3 @@ language_choice.addEventListener('click', (event) => {
 
 /*JS of notification menu*/
 
-const button_message_menu = document.querySelector('.message');
-const menu_message = document.querySelector('.menu_message');
-
-
-button_message_menu.addEventListener('focusout', (event) => {
-  menu_message.classList.remove('active');
-})
-
-
-button_message_menu.addEventListener('click', (e) => {
-
-  menu_message.classList.toggle('active');
-  console.log('Click is activated');
-})
