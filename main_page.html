@@ -37,7 +37,7 @@
             <div id="toggle_menu" class="drop_btn js_dropDown" tabindex="0">
               <i id="js_change_btn" class="fa-solid fa-bars-staggered fa-xl"></i> 
             </div>
-            <div id="dropDown_list" class="dropDown_content">
+            <div id="dropDown_list" class="dropDown_content" tabindex="0">
               <a href="#" class="first">Home</a>
               <a href="#"><span>Genre</span></a>
               <a href="#"><span>Types</span></a>
@@ -67,7 +67,7 @@
 
               <div class="active_search">
                 <div class="clearText">
-                  <span>Clear</span>
+                  <span id="cleaning">Clear</span>
                 </div>
                 <div class="inner_cont">
 
@@ -78,7 +78,7 @@
                     <div class="action">
                       <div class="filter_link">
                         <i class="fa-solid fa-filter"></i>
-                        <span>Filter</span>
+                        <span class="filter" >Filter</span>
                       </div>
                     </div>
                   </div>
@@ -104,7 +104,6 @@
                 </div>
               </div>
             </div>
-            
           </form>
 
 
@@ -465,8 +464,8 @@
     <script src="JS/header_logic/new_messages.js"></script>
     <script src="JS/dropDown_menues/dropDown_start.js"></script>
     <script src="JS/dropDown_menues/dropDown_end.js"></script>
-    <script type="module" src="JS/header_logic/search_logic.js" ></script>
     <script type="module" src="JS/header_logic/search_logic.js"></script>
+    <script type="module" src="JS/header_logic/input_logic.js"></script>
     <script type="module" src="JS/carousel.js"></script>
     <script src="JS/little_grid.js"></script>
     <script src="JS/anime_tops.js" type="module"></script>

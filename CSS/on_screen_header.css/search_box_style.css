@@ -278,7 +278,7 @@ input[type="text"] {
   box-sizing:border-box;
   width: 100%;
   padding-top: 5px;
-  outline: none;
+  outline: none; 
 }
 
 .bottom_search{
@@ -357,4 +357,44 @@ input[type="text"] {
     display: flex;
   }
 
+}
+
+@media screen and (max-width: 1500px) {
+  .style_search::placeholder{
+    font-size: 13.4px;
+  }
+  .quick_access span{
+    display: none;
+  }
+  .search-sign{
+    font-size: 16px;
+  }
+  .style_search::placeholder{
+    font-size: 13.5px;
+  }
+
+  .clearText{
+    font-size: 13.5px;
+  }
+  .tab,
+  .filter{
+    font-size: 13px;
+  }
+  .filter_link i{
+    font-size: 13px;
+  }
+
+  .navigation span,
+  .select span,
+  .exit span{
+    padding-left: 5px;
+    font-size: 12px;
+  } 
+
+  .navigation i,
+  .select i,
+  .exit i{
+    padding: 2px;
+    font-size: 17px;
+  }
 }

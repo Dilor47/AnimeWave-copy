@@ -340,6 +340,20 @@ body {
   .on_screen_header{
     height: 60px;
   }
+
+  .extra_2watch,
+  .random_choice{
+    font-size: 10px;
+  }
+  .menu_message{
+    width: 250px;
+    height: 70px;
+  }
+  .notifications,
+  .message_header{
+    font-size: 12.4px;
+  }
+
 }
 
 @media screen and (max-width: 1300px) {

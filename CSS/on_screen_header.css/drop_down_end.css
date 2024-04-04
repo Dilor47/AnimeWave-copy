@@ -28,7 +28,8 @@
   top: 57px;
   background-color: rgb(31, 30, 30);
   width: 200px;
-  height: 260px;
+  height: 0;
+  overflow: hidden;
   border-radius: 5px;
   transition: .3s;
   z-index: 5;
@@ -65,6 +66,7 @@
   opacity: 1;
   transform: scaleY(1);
   transition: .3s;
+  height: auto;
 }
 
 
@@ -84,6 +86,16 @@
   }
   .tooltip_options{
     width: 43px;
+  }
+  .container_profile a{
+    font-size: 13px;
+    padding: 6px;
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+  .container_profile{
+    width: auto;
+    
   }
 }
 
