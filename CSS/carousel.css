@@ -76,7 +76,6 @@ body{
   display: flex;
   text-align: center;
   color: var(--main-text-color);
-
   user-select: none;
 } 
 
@@ -133,9 +132,15 @@ body{
 
 
 .flickity-page-dots{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 93%;
-  left : -42%;
+  border: 1px solid white;
+  top: 90%;
+  left : 0;
+  width: 250px;
+  height: 40px;
   color:rgb(233, 233, 204);
 }
 
@@ -163,9 +168,6 @@ body{
     line-height: 1.6rem;
     letter-spacing: 1.2px;
   }
-  .flickity-page-dots{
-    left : -38%;
-  }
 }
 
 @media screen and (max-width: 1750px) {
@@ -179,10 +181,6 @@ body{
     font-size:17px;
     line-height: 1.6rem;
     letter-spacing: 1.2px;
-  }
-  .flickity-page-dots{
-    left : -38%;
-    top: 90%;
   }
 }
 
@@ -249,13 +247,6 @@ body{
   }
   .middle_text_length{
     line-height : 2rem;
-  }
-
-  .flickity-page-dots{
-    width: auto;
-    left : 50%;
-    top: 95%;
-    transform: translateX(-50%);
   }
 }
 
