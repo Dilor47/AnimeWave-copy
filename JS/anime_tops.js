@@ -1,4 +1,5 @@
 import top_anime_data from '../data/info_top_rank.js';
+import generate_hover from './hover_anime_details.js';
 
 let picked_data = true;
 
@@ -34,95 +35,8 @@ function render_list() {
       <div class="anime_pict">
         <img src="${anime_elem.img_anime}">
       </div>
-
-      <div class="main_hover_cont">
-        <div class="anime_hover_cont">
-
-          <div class="title_hover">
-            <div class="hover_title">${anime_elem.title}</div>
-          </div>
-
-          <div class="ep_available episode_info">
-
-            <div class="ep_release">
-
-              <div class="age_limit">PG 13</div>
-
-              ${anime_elem.hd? `<p class="isHD">HD</p>`: ''}
-
-
-              <div class="mic_sub_total">
-                
-                ${isThereSubDub(anime_elem.sub, 'sub', 'hov')} 
-    
-                ${isThereSubDub(anime_elem.dub, 'mic', 'hov')}
-                
-                ${getTotalEp(anime_elem.total_episodes, true)}
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="short_hover_desc">
-            <p>${anime_elem.short_desc}</p>
-          </div>
-
-          <div class="detailer_anime_info">
-
-            <div class="other_name make_row">
-              <p class='comp_info'> <span class="component_name">Other names: </span> 
-              ${unpack_array(anime_elem.other_names)}</p>
-            </div>
-
-            <div class="h_scores make_row">
-              <p class='comp_info'> <span class="component_name">Scores: </span> 
-              ${anime_elem.score} <span class="component_name">/${anime_elem.reviewed} reviews </span>  </p>
-            </div>  
-
-            <div class="aired_date make_row">
-              <p class='comp_info'> <span class="component_name">Data aired: </span> 
-              ${anime_elem.data_aired} to ${anime_elem.data_completed}</p>
-            </div>
-
-            <div class="duration make_row">
-              <p class='comp_info'> <span class="component_name">Duration: </span> 
-              ${anime_elem.duration} min</p>
-            </div>
-
-            <div class="anime_status make_row">
-              <p class='comp_info'> <span class="component_name">Status: </span> 
-              ${anime_elem.status }</p>
-            </div>
-
-            <div class="genre make_row">
-              <ul class="genre_style comp_info"><span class="component_name">Genre: </span> 
-              ${create_genre(anime_elem.genre)}</ul>
-            </div>
-
-            <div class="action_cont">
-
-              <div class='cont_one'>
-                <div class='button_class' href=''>
-                  <p class='button_class_text'> 
-                   <i class="fa-solid fa-play"></i> Watch
-                  <p/>
-                 </div>
-              </div>
-              
-              <div class='cont'>
-                <i class="fa-solid fa-people-arrows fa-xl"></i>
-              </div>
-
-              <div class='cont'>
-                <i class="fa-solid fa-plus fa-xl"></i>
-              </div>
-              
-            </div>
-
-          </div>
-
-        </div>
-      </div>  
+      ${generate_hover(anime_elem)}
+      
 
 
       <div class="deep_desc">
@@ -191,19 +105,5 @@ function schuffle_data(ready_array) {
     [data[i], data[j]] = [data[j], data[i]];
   }
   return data
-}
-
-function create_genre(genres) {
-  let genres_choice = '';
-  genres.forEach((genre_elem) => {
-    genres_choice += `<li href='#'>${genre_elem}, </li>`;
-  });
-  return genres_choice;
-
-}
-
-function unpack_array(array) {
-  const ready_one = array.join(', ');
-  return ready_one;
 }
 
