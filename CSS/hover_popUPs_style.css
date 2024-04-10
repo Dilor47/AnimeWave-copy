@@ -179,7 +179,6 @@
 }
 
 .button_class_text{
-  font-size: 12px;
   letter-spacing: .5px;
   font-size: 16px;
   font-weight: 500;
@@ -206,4 +205,67 @@
 
 .cont i:hover{
   background-color: var(--color-text);
+}
+
+@media screen and (max-width: 1700px) {
+  .main_hover_cont{
+    top: 50%;
+    left: -55%;
+    transform-origin: top right;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .main_hover_cont{
+    left: -65%;
+  }
+  .anime_hover_cont{
+    padding: 15px;
+  }
+  .title_hover{
+    font-size: 15px;
+  }
+  .age_limit{
+    font-size: 8px;
+    padding: 1px 3px;
+  };
+  .isHD{
+    font-size: 8px;
+  }
+  .fa.fahov{
+    font-size: 8px;
+    display: flex;
+    align-items:center;
+    padding: 0 7px;
+  }
+  .ep_subhov,
+  .ep_michov,
+  .ep_episodeshov{
+    height: 17px;
+  }
+  .short_hover_desc p{
+    letter-spacing: 1.2;
+    line-height: 1.2;
+    font-size: 12px;
+  }
+  .component_name{
+    font-size: 11px;
+  }
+  .comp_info{
+    font-size: 12.5px;
+  }
+  .button_class_text{
+    font-size: 13px;
+  }
+  .cont i{
+    width: 33px;
+    height: 33px;
+  }
+  
+}
+
+@media screen and (max-width: 1350px) {
+  .main_hover_cont{
+    left: -75%;
+  }
 }

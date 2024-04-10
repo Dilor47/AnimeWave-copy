@@ -47,12 +47,14 @@
 .ep_subhov{
   background-color: var(--purple-color-effect);
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  white-space: nowrap;
 }
 
 .ep_mic,
 .ep_michov{
   background-color: rgb(92, 1, 43);
   clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+  white-space: nowrap;
 }
 
 .ep_episodes,

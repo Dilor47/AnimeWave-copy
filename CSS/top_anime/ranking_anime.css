@@ -100,4 +100,13 @@
   .period{
     padding-bottom: 10px;
   }
+
+  .buttons_container{
+    width: 155px;
+    height: 33px;
+  }
+
+  .data_style_button{
+    font-size: 13px;
+  }
 }

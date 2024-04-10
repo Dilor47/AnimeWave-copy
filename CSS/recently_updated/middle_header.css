@@ -49,6 +49,16 @@
   color: aliceblue;
 }
 
+@media screen and (max-width: 1450px) {
+  .cont_recent_updates span{
+    font-size: 14px;
+  }
+
+  .move_pages_cont i{
+    font-size: 12.5px;
+  }
+} 
+
 @media screen and (max-width: 800px) {
   #recent_updates{
     display: block;
