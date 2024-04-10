@@ -10,6 +10,7 @@ anime_description.forEach((element) => {
   <div class="carousel-cell" style="background: linear-gradient(to right,  #131313,
   #131313,  
   ${element.background},
+  #131313,
   #131313, 
   #131313, 
   #131313, 

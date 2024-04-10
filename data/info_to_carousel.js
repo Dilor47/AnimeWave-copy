@@ -21,7 +21,7 @@ export const anime_description = [
     short_desc: '"Toradora!" is a delightful romantic comedy anime centered around Ryuji and Taiga, high school students who team up to assist each other in their romantic pursuits...',
     smallest_desc: '"Toradora!" is a delightful romantic comedy anime centered around Ryuji and Taiga...',
     image: 'images/images_carousel/toradora_2.jpg',
-    background: 'rgb(115, 107, 107)'
+    background: '#A186A7'
   },
   
   {
@@ -34,7 +34,7 @@ export const anime_description = [
     short_desc: '"Haikyuu!!" is an anime and manga series centered around high school volleyball. It follows Shoyo Hinata, an enthusiastic and short-statured player inspired by...',
     smallest_desc:'"Haikyuu!!" is an anime and manga series centered around high school volleyball. It follows...',
     image: "images/images_carousel/haikyu.jpg",
-    background: 'rgb(48, 7, 42)'
+    background: '#494949'
   },
   {
     title: 'POKÉMON',
@@ -69,8 +69,8 @@ export const anime_description = [
     main_desc: '"My Hero Academia" is about a world where almost everyone has unique powers. Izuku Midoriya, a Quirkless boy, dreams of being a hero. When he inherits a powerful Quirk, he attends U.A. High School to learn to become a hero. The series follows his journey, friendships, and challenges in a world filled...',
     short_desc: '"My Hero Academia" is about a world where almost everyone has unique powers. Izuku Midoriya, a Quirkless boy, dreams of being a...',
     smallest_desc: '"My Hero Academia" is about a world where almost everyone has unique powers. Izuku Midoriya...',
-    image: "images/images_carousel/my_hero_aca.jpg",
-    background: 'rgb(7, 36, 165)'
+    image: 'https://images4.alphacoders.com/698/698782.jpg',
+    background: '#FF1100'
   },
   {
     title: 'ONE PIECE',
@@ -82,7 +82,7 @@ export const anime_description = [
     short_desc: '"One Piece" is an adventure-filled manga and anime about Monkey D. Luffy and his pirate crew"s quest to find the ultimate treasure, the One Piece...',
     smallest_desc: '"One Piece" is an adventure-filled manga and anime about Monkey D. Luffy and his pirate crew"s quest to...',
     image: "images/images_carousel/one_piece.jpg",
-    background: 'rgb(19, 189, 56)'
+    background: '#22F264'
   },
   {
     title: 'ROAD TO NINJA...',
@@ -93,8 +93,8 @@ export const anime_description = [
     main_desc: '"Road to Ninja: Naruto the Movie" is a film from the Naruto series where Naruto and Sakura are transported to an alternate reality. In this world, their personalities are reversed, and they encounter different versions of their friends and enemies... ',
     short_desc: '"Road to Ninja: Naruto the Movie" is a film from the Naruto series where Naruto and Sakura are transported to an alternate reality. In this world...',
     smallest_desc: '"Road to Ninja: Naruto the Movie" is a film from the Naruto series where Naruto and Sakura are transported to...',
-    image: "images/images_carousel/road_to_ninja.jpg",
-    background: 'rgb(20, 131, 175)'
+    image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/de9cu8a-71228b33-162d-4a40-9227-b7fa72e7ac38.png/v1/fill/w_1192,h_670,q_70,strp/road_to_ninja___naruto_the_movie_wallpaper_2_by_maxiuchiha22_de9cu8a-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mjc4NiIsInBhdGgiOiJcL2ZcLzg0ZGMxM2I3LWEyZTctNGI0NS04M2VjLTMxMWU3MmU4MjkwMFwvZGU5Y3U4YS03MTIyOGIzMy0xNjJkLTRhNDAtOTIyNy1iN2ZhNzJlN2FjMzgucG5nIiwid2lkdGgiOiI8PTQ5NTMifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.QVamA9GThOm4l_vaQZae5_kEJRYOO2DR2FODi0lCu54',
+    background: '#FF3900'
   },
   {
     title: 'TOKYO GHOUL',
@@ -102,10 +102,10 @@ export const anime_description = [
     is_there_sub: '<i class="fa-solid fa-closed-captioning fa-2xl icon"></i>',
     is_there_vSub: '<i class="fa-solid fa-microphone fa-xl icon"></i>',
     release_data: 'June 16, 2015',
-    main_desc: '"Tokyo Ghoul" is a dark fantasy manga and anime series set in Tokyo, where ghouls—creatures that look like humans but need to consume human flesh to survive—exist. Kaneki, an ordinary college student, becomes a half-ghoul after a chance encounter, gaining ghoul abilities while struggling to maintain his humanity. The story delves...',
-    short_desc: '"Tokyo Ghoul" is a dark fantasy manga and anime series set in Tokyo, where ghouls—creatures that look like humans but need to consume human flesh to',
+    main_desc: '"Tokyo Ghoul" is a dark fantasy manga and anime series set in Tokyo, where ghouls—creatures that look like humans but need to consume human flesh to survive—exist. Kaneki, an ordinary college student, becomes a half-ghoul after a chance encounter...',
+    short_desc: '"Tokyo Ghoul" is a dark fantasy manga and anime series set in Tokyo, where ghouls—creatures that look like humans but need to consume human flesh to...',
     smallest_desc: '"Tokyo Ghoul" is a dark fantasy manga and anime series set in Tokyo, where...',
     image: "images/images_carousel/tokyo_ghoul.jpg",
-    background: 'rgb(209, 4, 65)'
+    background: '#F2223E'
   },
 ]
