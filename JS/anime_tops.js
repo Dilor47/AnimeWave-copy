@@ -69,7 +69,7 @@ function render_list() {
 }
 
 
-function isThereSubDub(isAvailable, subDub, hover_ind='') {
+export function isThereSubDub(isAvailable, subDub, hover_ind='') {
   return isAvailable? (
    `<div class="ep_${subDub + hover_ind}">
       <i class="ep_${subDub + hover_ind}_amount fa ${hover_ind? 'fahov' : ''}">${isAvailable}</i>
@@ -77,7 +77,7 @@ function isThereSubDub(isAvailable, subDub, hover_ind='') {
   ) : '';
 };
 
-function getTotalEp(amount, type=false) {
+export function getTotalEp(amount, type=false) {
   return `
     <div class="${type? 'ep_episodeshov': 'ep_episodes'}">
       <i class="ep_episodes_amount fa ${type? 'fahov': ''}">${amount}</i>
