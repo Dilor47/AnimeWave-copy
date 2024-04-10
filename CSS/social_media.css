@@ -12,7 +12,7 @@ html{
   height: auto;
   display: block;
   background-color: rgb(0, 0, 0);
-  margin:20px 0;
+  margin: 20px 0;
 
   border-radius: 10px;
   padding: 5px;
@@ -109,32 +109,51 @@ html{
   padding-left: 10%;
 } 
 
+@media screen and (max-width: 1300px) {
+  .message_to_user::after{
+    font-size: 11px;
+  }
+  .sum_followers p{
+    font-size: 13px;
+  }
+
+  .where_findUs i{
+    flex: 0 1 100px;
+    font-size: 13px;
+    height: 33px;
+  }
+
+  .media_style:after{
+    font-size: 13px;
+  } 
+  
+}
+
 
 @media screen and (max-width: 1000px) {
   .free_space{
     display:none;
   }
-  .media_style:after{
-    content: none;
-  } 
 }
 
 @media screen and (max-width: 800px) {
-  .where_findUs .telegram,
-  .where_findUs .messenger{
-    display:none;
+  .media_style:after{
+    content: none;
+  } 
+  .where_findUs i{
+    flex: 0 1 50px;
+    font-size: 13px;
+    height: 33px;
   }
-}
+  .where_findUs{
+    justify-content: flex-start;
+  }
 
-@media screen and (max-width: 550px) {
-  .where_findUs .whatsApp{
-    display:none;
-  }
 }
 
 .hover_jump{
   transform: translateY(0);
-  transition: all .3s ease-in-out;
+  transition: transform .3s ease-in-out;
 }
 
 .hover_jump:hover{
