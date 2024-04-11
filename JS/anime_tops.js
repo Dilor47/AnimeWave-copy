@@ -1,4 +1,4 @@
-import top_anime_data from '../data/info_top_rank.js';
+import top_anime_data from '../data/content_data.js';
 import generate_hover from './hover_anime_details.js';
 
 let picked_data = true;
@@ -22,7 +22,7 @@ function render_list() {
   const render_from = picked_data === true? top_anime_data : schuffle_data(top_anime_data);
 
   render_from.forEach((anime_elem, i) => {
-    if(i > render_from.length - 1) {
+    if(i > 9 - 1) {
       return;
     }
     const index = i + 1;
@@ -35,9 +35,8 @@ function render_list() {
       <div class="anime_pict">
         <img src="${anime_elem.img_anime}">
       </div>
-      ${generate_hover(anime_elem)}
-      
 
+      ${generate_hover(anime_elem)}
 
       <div class="deep_desc">
         <div class="title">
