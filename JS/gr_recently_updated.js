@@ -6,14 +6,20 @@ recently_updated();
 
 function recently_updated() {
   let generated_hovers = '';
-
+  let limit = 0;
   content_data.forEach((current_elem) => {
+    if(limit >= 12) {
+      return;
+    }
     let html = `
     <div class="anime_item">
       <div class="anim">
-        <img src="${current_elem.img_anime}" >
-        <div class="meta">
+        <div class='img_container'>
+          <img src="${current_elem.img_anime}" >
+        </div>
+        
 
+        <div class="meta">
           <div class="meta_elems">
             ${current_elem.sub?
               `<div class="ep_subhov">
@@ -36,14 +42,15 @@ function recently_updated() {
           </div>
 
         </div>
-
       </div>
+      
       <div class="info"> 
         ${current_elem.title}
       </div>
     </div>
     `;
     generated_hovers += html;
+    limit++;
   })
   address.innerHTML = generated_hovers
 }

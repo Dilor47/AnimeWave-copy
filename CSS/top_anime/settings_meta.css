@@ -113,22 +113,22 @@
   .ep_sub,
   .ep_mic,
   .ep_episodes{
-    height: 15px;
+    height: 17px;
   }
   .fa{
-    padding: 0 6px;
-    font-size: 8px;
+    padding: 0 7px;
+    font-size: 10px;
   }
 
   .ep_sub_amount::before{
     padding-right: 3px;
-    font-size: 10px;
+    font-size: 11px;
     
   }
   
   .ep_mic_amount::before{
     padding-right: 3px;
-    font-size: 10px;
+    font-size: 11px;
   }
   .watch_to i {
     font-size: 13px;
