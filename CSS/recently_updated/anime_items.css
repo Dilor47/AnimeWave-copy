@@ -10,24 +10,23 @@
   justify-content: space-around;
 
   box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.099);
 
   font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 
 .anime_item{
-  min-width: 160px;
-  max-width: 16.5%;
+  /*min-width: 160px;*/
+  width: auto;
+  max-width: 16.6%;
   flex-grow: 1;
-  min-height: 250px;
-  max-height: 350px;
+  /*min-height: 140px;*/
+  /*max-height: 350px;*/
   height: auto;
   box-sizing: border-box;
   padding: 0 10px;
   margin: 0;
   margin-bottom: 20px;
-  border: 1px solid green;
 }
 
 
@@ -41,11 +40,9 @@
   box-sizing: border-box;
   padding: auto;
   margin: auto;
-  border: 1px solid red;
 }
 
 .img_container{
-  border: 1px solid greenyellow;
   width: 100%;
   height: 100%;
   display: flex;
@@ -56,7 +53,7 @@
 .anim img{
   width: 100%;
   height: 100%;
-  border-radius: 7px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -94,3 +91,21 @@
   margin-top: 5px;
 }
 
+
+@media screen and (max-width: 1200px) {
+  .anime_item{
+    min-width: 160px;
+  }
+}
+
+@media screen and (max-width: 977px) {
+  .anime_item{
+    max-width: 25%;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .anime_item{
+    max-width: 33%;
+  }
+}
