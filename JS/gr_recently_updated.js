@@ -43,6 +43,7 @@ function recently_updated() {
 
         </div>
       </div>
+      ${generate_hover(current_elem)}
       
       <div class="info"> 
         ${current_elem.title}
