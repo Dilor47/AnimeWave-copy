@@ -34,7 +34,7 @@ const animeData = [
     reviewed: 100000,
     data_completed: 'Jul 16, 1988',
     data_aired: 'Jul 16, 1988',
-    duration: '2 hr 4 min',
+    duration: '2 hr 4',
     status: 'Completed',
     genre: ['Action', 'Military', 'Sci-Fi', 'Adventure', 'Horror', 'Supernatural'],
     link_to_anime: 'https://myanimelist.net/anime/47/Akira'
@@ -54,7 +54,7 @@ const animeData = [
     reviewed: 90000,
     data_completed: 'Nov 18, 1995',
     data_aired: 'Nov 18, 1995',
-    duration: '1 hr 23 min',
+    duration: '1 hr 23',
     status: 'Completed',
     genre: ['Action', 'Mecha', 'Police', 'Psychological', 'Sci-Fi', 'Seinen'],
     link_to_anime: 'https://myanimelist.net/anime/43/Koukaku_Kidoutai'
@@ -74,7 +74,7 @@ const animeData = [
     reviewed: 100000,
     data_completed: 'Apr 16, 1988',
     data_aired: 'Apr 16, 1988',
-    duration: '1 hr 28 min',
+    duration: '1 hr 28',
     status: 'Completed',
     genre: ['Drama', 'Historical'],
     link_to_anime: 'https://myanimelist.net/anime/578/Hotaru_no_Haka'

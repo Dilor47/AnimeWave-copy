@@ -7,7 +7,7 @@
 
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 
   box-sizing: border-box;
 
@@ -100,6 +100,9 @@
 @media screen and (max-width: 1200px) {
   .anime_item{
     min-width: 160px;
+  }
+  .anime_item{
+    max-width: 20%;
   }
 }
 

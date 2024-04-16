@@ -36,7 +36,7 @@ function render_list() {
         <img src="${anime_elem.img_anime}">
       </div>
 
-      ${generate_hover(anime_elem)}
+      ${generate_hover(anime_elem, 'top_anime')}
 
       <div class="deep_desc">
         <div class="title">

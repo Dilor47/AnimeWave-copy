@@ -1,8 +1,8 @@
 import {isThereSubDub, getTotalEp} from './anime_tops.js';
 
-function generate_hover(current_elem, specs_class) {
+function generate_hover(current_elem, spec_catg) {
   const ready_hover = `
-  <div class="main_hover_cont">
+  <div class="main_hover_cont ${spec_catg}">
         <div class="anime_hover_cont">
 
           <div class="title_hover">

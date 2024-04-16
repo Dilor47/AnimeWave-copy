@@ -3,8 +3,7 @@
 .main_hover_cont{
   font-family: 'Josefin Sans', sans-serif;
   position: absolute;
-  top: 50%;
-  left: 25%;
+  transform-origin: top-left;
   background-color: var(--slighteer-light-grey);
   border: .5px solid rgb(27, 26, 26);
   width: 295px;
@@ -14,12 +13,29 @@
   z-index: 2;
   transition: all .2s .2s ease-in-out;
   opacity: 0;
-  transform-origin: top left;
+  
   transform: scale(0);
   font-size: 12px;
 }
 
+.main_hover_cont.top_anime{
+  top: 50%;
+  left: 25%;
+  transform-origin: top left;
+}
+
+.main_hover_cont.recently_updated{
+  top: 30%;
+  left: 100%;
+  transform-origin: left;
+}
+
 .anime_pict:hover + .main_hover_cont{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.anim:hover + .main_hover_cont{
   opacity: 1;
   transform: scale(1);
 }
@@ -208,7 +224,7 @@
 }
 
 @media screen and (max-width: 1700px) {
-  .main_hover_cont{
+  .main_hover_cont.top_anime{
     top: 50%;
     left: -55%;
     transform-origin: top right;
@@ -216,7 +232,7 @@
 }
 
 @media screen and (max-width: 1550px) {
-  .main_hover_cont{
+  .main_hover_cont.top_anime{
     left: -65%;
   }
   .anime_hover_cont{
@@ -265,7 +281,47 @@
 }
 
 @media screen and (max-width: 1350px) {
-  .main_hover_cont{
+  .main_hover_cont.top_anime{
     left: -75%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main_hover_cont.recently_updated.first_right{
+    top: 30%;
+    left: -125%;
+    transform-origin: right;
+  }
+}
+
+@media screen and (max-width: 977px) {
+  .main_hover_cont.recently_updated.first_right{
+    top: 30%;
+    left: 100%;
+    transform-origin: left;
+  }
+  .main_hover_cont.recently_updated.second_right{
+    top: 30%;
+    left: -125%;
+    transform-origin: right;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .main_hover_cont.recently_updated.first_right,
+  .main_hover_cont.recently_updated.second_right{
+    top: 30%;
+    left: 50%;
+    transform-origin: left;
+  }
+  .main_hover_cont.recently_updated.third_right{
+    top: 30%;
+    left: -183%;
+    transform-origin: right;
+  }
+  .main_hover_cont.recently_updated.middle_hover{
+    top: 87%;
+    left: -50%;
+    transform-origin: top;
   }
 }
