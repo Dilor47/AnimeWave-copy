@@ -55,7 +55,9 @@ function render_list() {
 
           </div>
           <div class="watch_to">
-            <i class="fa-solid fa-minus fa-xs"></i>
+            <div class='minus_sign'>
+              <i class="fa-solid fa-minus fa-xs"></i>
+            </div>
             <i class='type_anime'>${anime_elem.anime_type}</i>  
           </div>
         </div>
