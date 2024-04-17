@@ -6,7 +6,6 @@ const address = document.getElementById('ani_elems');
 let first_count = 0;
 let second_count = 0;
 let third_count = 0;
-let support_counter = 0;
 
 recently_updated();
 

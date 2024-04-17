@@ -289,7 +289,8 @@
 @media screen and (max-width: 1200px) {
   .main_hover_cont.recently_updated.first_right{
     top: 30%;
-    left: -125%;
+    left: auto;
+    right: 100%;
     transform-origin: right;
   }
 }
@@ -302,26 +303,29 @@
   }
   .main_hover_cont.recently_updated.second_right{
     top: 30%;
-    left: -125%;
+    left: auto;
+    right: 100%;
     transform-origin: right;
   }
 }
 
-@media screen and (max-width: 655px) {
+@media screen and (max-width: 658px) {
+  .main_hover_cont.recently_updated,
   .main_hover_cont.recently_updated.first_right,
   .main_hover_cont.recently_updated.second_right{
     top: 30%;
-    left: 50%;
+    left: 100%;
     transform-origin: left;
   }
   .main_hover_cont.recently_updated.third_right{
     top: 30%;
-    left: -183%;
+    left: auto;
+    right: 100%;
     transform-origin: right;
   }
   .main_hover_cont.recently_updated.middle_hover{
-    top: 87%;
-    left: -50%;
-    transform-origin: top;
+    top: 30%;
+    left: 10%;
+    transform-origin: top left;
   }
 }
