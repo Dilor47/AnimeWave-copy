@@ -42,7 +42,6 @@ body, html{
 }
 
 
-
 @media screen and (max-width: 1200px) {
   .smaller_grid{
     display: none;
