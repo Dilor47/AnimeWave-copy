@@ -1,0 +1,15 @@
+.manga_ad{
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+.manga_gif{
+  width: 100%;
+  height: auto;
+}
