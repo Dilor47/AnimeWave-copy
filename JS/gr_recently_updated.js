@@ -19,46 +19,52 @@ function recently_updated() {
     }
     let html = `
     <div class="anime_item">
-      <div class="anim">
-        <div class='img_container'>
-          <img src="${current_elem.img_anime}" >
+      <a href ='#'>
+        <div class="anim">
+          <div class='img_container'>
+            <img src="${current_elem.img_anime}" >
+          </div>
+          
+
+          <div class="meta">
+            <div class="meta_elems">
+              ${current_elem.sub?
+                `<div class="ep_subhov">
+                  <i class="ep_subhov_amount fa faElem">${current_elem.sub}</i>
+                </div>` : ''}
+              ${current_elem.dub? 
+                ` <div class="ep_michov">
+                  <i class="ep_michov_amount fa faElem">${current_elem.dub}</i>
+                </div>`: ''}
+            
+              ${current_elem.total_episodes? 
+                `<div class="ep_episodeshov">
+                  <i class="ep_episodeshov_amount fa faElem">${current_elem.total_episodes}</i>
+                </div>`: ''
+              }
+            </div>
+
+            <div class="watch_to_Elm">
+              <i class='type_anime_Elm'>${current_elem.anime_type}</i>  
+            </div>
+
+          </div>
         </div>
         
+        ${generate_hover(current_elem, 
+          'recently_updated ' + 
+          first_hover_loc(current_elem) + 
+          second_hover_loc() + 
+          third_hover_loc(current_elem) )}
 
-        <div class="meta">
-          <div class="meta_elems">
-            ${current_elem.sub?
-              `<div class="ep_subhov">
-                <i class="ep_subhov_amount fa faElem">${current_elem.sub}</i>
-              </div>` : ''}
-            ${current_elem.dub? 
-              ` <div class="ep_michov">
-                <i class="ep_michov_amount fa faElem">${current_elem.dub}</i>
-              </div>`: ''}
-           
-            ${current_elem.total_episodes? 
-              `<div class="ep_episodeshov">
-                <i class="ep_episodeshov_amount fa faElem">${current_elem.total_episodes}</i>
-              </div>`: ''
-            }
-          </div>
-
-          <div class="watch_to_Elm">
-            <i class='type_anime_Elm'>${current_elem.anime_type}</i>  
-          </div>
-
+      </a>
+      
+      <a href='#'>
+        <div class="info"> 
+          ${current_elem.title}
         </div>
-      </div>
-
-      ${generate_hover(current_elem, 
-        'recently_updated ' + 
-        first_hover_loc(current_elem) + 
-        second_hover_loc() + 
-        third_hover_loc(current_elem) )}
-      <div class="info"> 
-
-        ${current_elem.title}
-      </div>
+      </a>
+      
 
     </div>
     `;
