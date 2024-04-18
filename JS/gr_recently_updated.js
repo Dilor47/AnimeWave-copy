@@ -1,5 +1,5 @@
 import content_data from '../data/content_data.js';
-import generate_hover from './hover_anime_details.js';
+import generate_elem from './gr_anime_elem.js';
 
 const address = document.getElementById('ani_elems');
 
@@ -17,57 +17,7 @@ function recently_updated() {
     if(limit >= 12) {
       return;
     }
-    let html = `
-    <div class="anime_item">
-      <a href ='#'>
-        <div class="anim">
-          <div class='img_container'>
-            <img src="${current_elem.img_anime}" >
-          </div>
-          
-
-          <div class="meta">
-            <div class="meta_elems">
-              ${current_elem.sub?
-                `<div class="ep_subhov">
-                  <i class="ep_subhov_amount fa faElem">${current_elem.sub}</i>
-                </div>` : ''}
-              ${current_elem.dub? 
-                ` <div class="ep_michov">
-                  <i class="ep_michov_amount fa faElem">${current_elem.dub}</i>
-                </div>`: ''}
-            
-              ${current_elem.total_episodes? 
-                `<div class="ep_episodeshov">
-                  <i class="ep_episodeshov_amount fa faElem">${current_elem.total_episodes}</i>
-                </div>`: ''
-              }
-            </div>
-
-            <div class="watch_to_Elm">
-              <i class='type_anime_Elm'>${current_elem.anime_type}</i>  
-            </div>
-
-          </div>
-        </div>
-        
-        ${generate_hover(current_elem, 
-          'recently_updated ' + 
-          first_hover_loc(current_elem) + 
-          second_hover_loc() + 
-          third_hover_loc(current_elem) )}
-
-      </a>
-      
-      <a href='#'>
-        <div class="info"> 
-          ${current_elem.title}
-        </div>
-      </a>
-      
-
-    </div>
-    `;
+    let html = generate_elem(current_elem, true);
     generated_hovers += html;
     limit++;
     first_count++;
@@ -78,7 +28,7 @@ function recently_updated() {
 }
 
 
-function first_hover_loc() {
+export function first_hover_loc() {
   if (first_count === 3) {
     return " first_right";
   } else if(first_count === 4) {
@@ -89,7 +39,7 @@ function first_hover_loc() {
   }
 }
 
-function second_hover_loc() {
+export function second_hover_loc() {
   if(second_count === 2) {
     return " second_right";
   } else if(second_count === 3) {
@@ -100,7 +50,7 @@ function second_hover_loc() {
   }
 }
 
-function third_hover_loc() {
+export function third_hover_loc() {
   if(third_count === 1) {
     return ' middle_hover';
   } 

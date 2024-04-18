@@ -1,4 +1,5 @@
-#ani_elems{
+#ani_elems,
+.ready_continueWatchs{
   color: var(--color-white-icons);
   width: auto;
   height: auto;

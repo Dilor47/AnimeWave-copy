@@ -11,7 +11,7 @@
   align-items: center;
   height: auto;
   padding: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
 }
 
 .start_part,
@@ -43,14 +43,4 @@
 
 .end_part:hover{
   color: var(--purple-lighter-color);
-}
-
-.started_anime_cont{
-  background-color: aliceblue;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  height: 100%;
-  width: 100%;
-
 }
