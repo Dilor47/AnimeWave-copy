@@ -5,13 +5,13 @@ function anime_elem(current_elem, isThereHover) {
   let ready_elem =  `
   <div class="anime_item">
       <a href ='#'>
-        <div class="anim">
+        <div class="anim ${isThereHover? '': 'continue_part'}">
           <div class='img_container'>
             <img src="${current_elem.img_anime}" >
           </div>
           
-
-          <div class="meta">
+          ${isThereHover? 
+          `<div class="meta">
             <div class="meta_elems">
               ${current_elem.sub?
                 `<div class="ep_subhov">
@@ -33,7 +33,10 @@ function anime_elem(current_elem, isThereHover) {
               <i class='type_anime_Elm'>${current_elem.anime_type}</i>  
             </div>
 
-          </div>
+          </div>`: 
+          `<div class='at_stopPoint_detail'></div>`
+           }
+
         </div>
         
         ${isThereHover? generate_hover(current_elem, 

@@ -41,6 +41,11 @@ body, html{
   color: var(--color-text);
 }
 
+.new_elem{
+  width: 100%;
+  height: 20px;
+  border: 1px solid rgb(255, 2, 129);
+}
 
 @media screen and (max-width: 1200px) {
   .smaller_grid{

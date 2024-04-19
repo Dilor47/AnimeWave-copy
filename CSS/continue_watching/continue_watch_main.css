@@ -1,7 +1,8 @@
 .continue_watch{
   width: 100%;
-  height: 400px;
-  border: 1px solid rgba(221, 55, 174, 0.425);
+  height: auto;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgb(0, 255, 0);;
 }
 
 .continue_watch header{
@@ -43,4 +44,9 @@
 
 .end_part:hover{
   color: var(--purple-lighter-color);
+}
+
+
+.at_stopPoint_detail{
+  
 }

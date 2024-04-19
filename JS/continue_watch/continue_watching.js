@@ -11,7 +11,6 @@ function continue_watching_anime() {
 
   content_data.forEach((current_one) => {
     if(count < 6) {
-      console.log('redndering!');
       let html_part = generate_elem(current_one, false);
       ready_elems += html_part;
       count++;
