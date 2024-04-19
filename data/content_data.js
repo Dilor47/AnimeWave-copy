@@ -14,10 +14,12 @@ const animeData = [
     reviewed: 80000,
     data_completed: 'Mar 28, 2015',
     data_aired: 'Jan 10, 2015',
-    duration: '23',
+    org_duration_min: 23,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Game', 'Mystery', 'Psychological', 'Drama', 'Thriller'],
-    link_to_anime: 'https://myanimelist.net/anime/28223/Death_Parade'
+    link_to_anime: 'https://myanimelist.net/anime/28223/Death_Parade',
+    id: 1
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/5e38b6fa4249c0d7db7ceefa9d09cab2.jpg',
@@ -34,10 +36,12 @@ const animeData = [
     reviewed: 100000,
     data_completed: 'Jul 16, 1988',
     data_aired: 'Jul 16, 1988',
-    duration: '2 hr 4',
+    org_duration_min: 120,
+    org_duration_sec: 12,
     status: 'Completed',
     genre: ['Action', 'Military', 'Sci-Fi', 'Adventure', 'Horror', 'Supernatural'],
-    link_to_anime: 'https://myanimelist.net/anime/47/Akira'
+    link_to_anime: 'https://myanimelist.net/anime/47/Akira',
+    id: 2
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/eace73efc9679ac848958af4ab87ab98.jpg',
@@ -54,10 +58,12 @@ const animeData = [
     reviewed: 90000,
     data_completed: 'Nov 18, 1995',
     data_aired: 'Nov 18, 1995',
-    duration: '1 hr 23',
+    org_duration_min: 83,
+    org_duration_sec: 11,
     status: 'Completed',
     genre: ['Action', 'Mecha', 'Police', 'Psychological', 'Sci-Fi', 'Seinen'],
-    link_to_anime: 'https://myanimelist.net/anime/43/Koukaku_Kidoutai'
+    link_to_anime: 'https://myanimelist.net/anime/43/Koukaku_Kidoutai',
+    id: 3
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/69b33c53233de358ad77192ad45de59c.jpg',
@@ -74,10 +80,12 @@ const animeData = [
     reviewed: 100000,
     data_completed: 'Apr 16, 1988',
     data_aired: 'Apr 16, 1988',
-    duration: '1 hr 28',
+    org_duration_min: 88,
+    org_duration_sec: 55,
     status: 'Completed',
     genre: ['Drama', 'Historical'],
-    link_to_anime: 'https://myanimelist.net/anime/578/Hotaru_no_Haka'
+    link_to_anime: 'https://myanimelist.net/anime/578/Hotaru_no_Haka',
+    id: 4
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/a027cea51dd4df76c70ebf8ea93a8d75.jpg',
@@ -94,10 +102,12 @@ const animeData = [
     reviewed: 140000,
     data_completed: 'Sep 24, 2014',
     data_aired: 'Oct 2, 2011',
-    duration: '23',
+    org_duration_min: 23,
+    org_duration_sec: 42,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Fantasy'],
-    link_to_anime: 'https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011'
+    link_to_anime: 'https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011',
+    id: 5
   },
   {
     img_anime: 'https://static.aniwave.to/i/2019/06/a7c6d36a6dd798a38ae9a2fcad0c852a.jpg',
@@ -114,10 +124,12 @@ const animeData = [
     reviewed: 120000,
     data_completed: 'Mar 27, 1996',
     data_aired: 'Oct 4, 1995',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 12,
     status: 'Completed',
     genre: ['Action', 'Drama', 'Mecha', 'Psychological', 'Sci-Fi'],
-    link_to_anime: 'https://myanimelist.net/anime/30/Neon_Genesis_Evangelion'
+    link_to_anime: 'https://myanimelist.net/anime/30/Neon_Genesis_Evangelion',
+    id: 6
   },
   {
     img_anime: 'https://static.aniwave.to/i/b/b6/b650de88fed262ccef31e9a966c26977.jpg',
@@ -134,10 +146,12 @@ const animeData = [
     reviewed: 110000,
     data_completed: 'Apr 24, 1999',
     data_aired: 'Apr 3, 1998',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Comedy', 'Drama', 'Sci-Fi', 'Space'],
-    link_to_anime: 'https://myanimelist.net/anime/1/Cowboy_Bebop'
+    link_to_anime: 'https://myanimelist.net/anime/1/Cowboy_Bebop',
+    id: 7
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/9259cdfc960f11edd8fde20ab469e548.jpg',
@@ -154,10 +168,12 @@ const animeData = [
     reviewed: 130000,
     data_completed: 'Jan 31, 1996',
     data_aired: 'Apr 26, 1989',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Comedy', 'Fantasy', 'Martial Arts', 'Shounen'],
-    link_to_anime: 'https://myanimelist.net/anime/813/Dragon_Ball_Z'
+    link_to_anime: 'https://myanimelist.net/anime/813/Dragon_Ball_Z',
+    id: 8
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/1812b4672e6880f092294f755b5f3253.jpg',
@@ -174,10 +190,12 @@ const animeData = [
     reviewed: 140000,
     data_completed: 'Ongoing',
     data_aired: 'Apr 3, 2016',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Ongoing',
     genre: ['Action', 'Comedy', 'Super Power', 'School', 'Shounen'],
-    link_to_anime: 'https://myanimelist.net/anime/31964/Boku_no_Hero_Academia'
+    link_to_anime: 'https://myanimelist.net/anime/31964/Boku_no_Hero_Academia',
+    id: 9
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/d6ddccf3f69fae0493e8cf51130c31b1.jpg',
@@ -194,10 +212,12 @@ const animeData = [
     reviewed: 90000,
     data_completed: 'Sep 19, 2014',
     data_aired: 'Jul 4, 2014',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Mystery', 'Horror', 'Psychological', 'Supernatural', 'Drama'],
-    link_to_anime: 'https://myanimelist.net/anime/22319/Tokyo_Ghoul'
+    link_to_anime: 'https://myanimelist.net/anime/22319/Tokyo_Ghoul',
+    id: 10
   },
   {
     img_anime: "https://static.aniwave.to/i/2018/04/8496fcc79062a38febfeec4940487bea.jpg",
@@ -214,10 +234,12 @@ const animeData = [
     reviewed: 110000,
     data_completed: 'Dec 24, 2012',
     data_aired: 'Jul 8, 2012',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Fantasy', 'Game', 'Romance'],
-    link_to_anime: 'https://myanimelist.net/anime/11757/Sword_Art_Online'
+    link_to_anime: 'https://myanimelist.net/anime/11757/Sword_Art_Online',
+    id: 11
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/b91575df1255368819c7815beab0ecd9.jpg',
@@ -234,10 +256,12 @@ const animeData = [
     reviewed: 80000,
     data_completed: 'Sep 14, 2011',
     data_aired: 'Apr 6, 2011',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Thriller', 'Sci-Fi'],
-    link_to_anime: 'https://myanimelist.net/anime/9253/Steins_Gate'
+    link_to_anime: 'https://myanimelist.net/anime/9253/Steins_Gate',
+    id: 12
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/5a2a03c631d274622451643db250cf07.jpg',
@@ -254,10 +278,12 @@ const animeData = [
     reviewed: 130000,
     data_completed: 'Mar 23, 2017',
     data_aired: 'Oct 3, 2002',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Super Power'],
-    link_to_anime: 'https://myanimelist.net/anime/20/Naruto'
+    link_to_anime: 'https://myanimelist.net/anime/20/Naruto',
+    id: 13
   },
   {
     img_anime: 'https://static.aniwave.to/i/1/1b/1bb2150e9529b52995336d38e74e94b6.jpg',
@@ -274,10 +300,12 @@ const animeData = [
     reviewed: 150000,
     data_completed: 'Ongoing',
     data_aired: 'Oct 20, 1999',
-    duration: '24',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Ongoing',
     genre: ['Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy'],
-    link_to_anime: 'https://myanimelist.net/anime/21/One_Piece'
+    link_to_anime: 'https://myanimelist.net/anime/21/One_Piece',
+    id: 14
   },
   {
     img_anime: 'https://static.aniwave.to/i/2018/04/a55c09c47ea411f18bd35d1f3f0ec35e.jpg',
@@ -294,10 +322,12 @@ const animeData = [
     reviewed: 100000,
     data_completed: 'Jun 27, 2007',
     data_aired: 'Oct 4, 2006',
-    duration: '23',
+    org_duration_min: 23,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Mystery', 'Psychological', 'Supernatural', 'Thriller'],
-    link_to_anime: 'https://myanimelist.net/anime/1535/Death_Note'
+    link_to_anime: 'https://myanimelist.net/anime/1535/Death_Note',
+    id: 15
   },
   {
     img_anime: 'https://static.aniwave.to/i/e/e1/e1b8380f6759f73ea3124e45582d32e8.jpg',
@@ -314,10 +344,12 @@ const animeData = [
     reviewed: 6005,
     data_completed: 'Dec 25, 2022',
     data_aired: 'Oct 9, 2022',
-    duration: '23',
+    org_duration_min: 23,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Romance', 'Comedy', 'Ecchi', 'Drama'],
-    link_to_anime: ''
+    link_to_anime: '',
+    id: 16
   },
   {
     img_anime: "https://static.aniwave.to/i/5/59/5985eb9f3b64109c155714b911e2a673.jpg",
@@ -334,10 +366,12 @@ const animeData = [
     reviewed: 5568,
     data_completed: 'Sep 13, 2022',
     data_aired: 'Sep 13, 2022',
-    duration: '30 minutes per episode',
+    org_duration_min: 30,
+    org_duration_sec: 0,
     status: 'Ongoing',
     genre: ['Sci-Fi', 'Action'],
-    link_to_anime: 'https://example.com/cyberpunk-edgerunners'
+    link_to_anime: 'https://example.com/cyberpunk-edgerunners',
+    id: 17
   },
   {
     img_anime: "https://static.aniwave.to/i/2020/04/2c98f5e005589cd7db93965093f5d9fa.jpg",
@@ -354,10 +388,12 @@ const animeData = [
     reviewed: 23455,
     data_completed: 'Jul 19, 2008',
     data_aired: 'Feb 21, 2005',
-    duration: '24 minutes per episode',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Fantasy'],
-    link_to_anime: 'https://example.com/avatar-the-last-airbender'
+    link_to_anime: 'https://example.com/avatar-the-last-airbender',
+    id: 18
   },
   {
     img_anime: "https://static.aniwave.to/i/2018/04/c3a59661d4a6beef405711f6c2129448.jpg",
@@ -374,10 +410,12 @@ const animeData = [
     reviewed: 1543,
     data_completed: 'Apr 9, 2005',
     data_aired: 'Apr 19, 2002',
-    duration: '24 minutes per episode',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Action', 'Adventure', 'Drama'],
-    link_to_anime: 'https://example.com/black-lagoon'
+    link_to_anime: 'https://example.com/black-lagoon',
+    id: 19
   },
   {
     img_anime: "https://static.aniwave.to/i/b/b1/359624ee690b1744a5a978cd251f5401.jpg",
@@ -394,10 +432,12 @@ const animeData = [
     reviewed: 2542,
     data_completed: '?',
     data_aired: 'Jan 7, 2024',
-    duration: '25 minutes per episode',
+    org_duration_min: 25,
+    org_duration_sec: 0,
     status: 'Ongoing',
     genre: ['Action', 'Fantasy'],
-    link_to_anime: 'https://example.com/solo-leveling'
+    link_to_anime: 'https://example.com/solo-leveling',
+    id: 20
   },
   {
     img_anime: "https://static.aniwave.to/i/6/65/65da57f59e5c3a3b48cde3bc82170388.jpg",
@@ -414,10 +454,12 @@ const animeData = [
     reviewed: 1043,
     data_completed: '?',
     data_aired: 'Oct 1, 2023',
-    duration: '20 minutes per episode',
+    org_duration_min: 20,
+    org_duration_sec: 0,
     status: 'Ongoing',
     genre: ['Fantasy', 'Adventure'],
-    link_to_anime: 'https://example.com/shangri-la'
+    link_to_anime: 'https://example.com/shangri-la',
+    id: 21
   },
   {
     img_anime: "https://static.aniwave.to/i/2/22/22af22941391198c20bee7bc0f444194.jpg",
@@ -434,10 +476,12 @@ const animeData = [
     reviewed: 1242,
     data_completed: '?',
     data_aired: 'Jul 12, 2017 ',
-    duration: '24 minutes per episode',
+    org_duration_min: 24,
+    org_duration_sec: 0,
     status: 'Completed',
     genre: ['Drama', 'Psychological', 'School'],
-    link_to_anime: 'https://example.com/classroom-of-the-elite'
+    link_to_anime: 'https://example.com/classroom-of-the-elite',
+    id: 22
   }
 ];
 

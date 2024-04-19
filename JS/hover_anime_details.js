@@ -53,7 +53,7 @@ function generate_hover(current_elem, spec_catg) {
 
             <div class="duration make_row">
               <p class='comp_info'> <span class="component_name">Duration: </span> 
-              ${current_elem.duration} min</p>
+              ${current_elem.org_duration_min} min</p>
             </div>
 
             <div class="anime_status make_row">
