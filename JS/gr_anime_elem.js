@@ -1,7 +1,8 @@
 import {first_hover_loc, second_hover_loc, third_hover_loc} from './gr_recently_updated.js';
 import generate_hover from './hover_anime_details.js';
 
-function anime_elem(current_elem, isThereHover) {
+function anime_elem(current_elem, isThereHover, where_stopped) {
+  !isThereHover? console.log(where_stopped) : '';
   let ready_elem =  `
   <div class="anime_item">
       <a href ='#'>
@@ -34,7 +35,17 @@ function anime_elem(current_elem, isThereHover) {
             </div>
 
           </div>`: 
-          `<div class='at_stopPoint_detail'></div>`
+          `<div class='at_stopPoint_detail'>
+              <div class='already_watched_period'></div>
+              <div class='episode'>
+                EP
+                <span>${where_stopped.current_ep}</span>
+              </div>
+              <div class='duration_cont'>
+                
+              </div>
+          </div>`
+
            }
 
         </div>
@@ -60,3 +71,20 @@ function anime_elem(current_elem, isThereHover) {
 }
 
 export default anime_elem;
+
+time_converter((67 * 60) + 5);
+
+function time_converter(seconds) {
+  let h_time = Math.floor(seconds / 3600);
+  let m_time = Math.floor((seconds % 3600) / 60);
+  let s_time = (seconds % 60)
+  console.log(h_time, m_time, s_time);
+  
+  let ready_time = `${!h_time? '' : h_time}`;
+
+} 
+
+function hours_min(min) {
+  let min_time;
+  let hour_time;
+}

@@ -17,7 +17,7 @@ function recently_updated() {
     if(limit >= 12) {
       return;
     }
-    let html = generate_elem(current_elem, true);
+    let html = generate_elem(current_elem, true, false);
     generated_hovers += html;
     limit++;
     first_count++;

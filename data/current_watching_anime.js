@@ -18,11 +18,24 @@ let stopPoint_data = [
     stopPoint_sec: 34
   },
   {
-    id: 19,
+    id: 2,
+    current_ep: 6,
+    stopPoint_min: 7,
+    stopPoint_sec: 34
+  },
+  {
+    id: 6,
+    current_ep: 6,
+    stopPoint_min: 7,
+    stopPoint_sec: 34
+  },
+  {
+    id: 11,
     current_ep: 6,
     stopPoint_min: 7,
     stopPoint_sec: 34
   }
+
 ];
 
 export default stopPoint_data;

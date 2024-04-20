@@ -12,7 +12,7 @@ function continue_watching_anime() {
 
   continue_watch_data.forEach((current_one) => {
     if(count < 6) {
-      let html_part = generate_elem(found_idData(current_one.id), false);
+      let html_part = generate_elem(found_idData(current_one.id), false, current_one);
       ready_elems += html_part;
       count++;
     }
