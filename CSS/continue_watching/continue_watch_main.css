@@ -46,7 +46,8 @@
   color: var(--purple-lighter-color);
 }
 
-
-.at_stopPoint_detail{
-  
+.episode,
+.duration_cont{
+  margin: 5px;
+  font-size: 13px;
 }

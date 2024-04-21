@@ -36,13 +36,17 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
 
           </div>`: 
           `<div class='at_stopPoint_detail'>
-              <div class='already_watched_period'></div>
+              
               <div class='episode'>
                 EP
-                <span>${where_stopped.current_ep}</span>
+                <span>
+                ${where_stopped.current_ep}
+                </span>
               </div>
+
               <div class='duration_cont'>
-                
+                ${time_converter((where_stopped.stopPoint_min * 60) + where_stopped.stopPoint_sec)} /
+                ${time_converter((current_elem.org_duration_min * 60) + current_elem.org_duration_sec)}
               </div>
           </div>`
 
@@ -72,19 +76,13 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
 
 export default anime_elem;
 
-time_converter((67 * 60) + 5);
-
 function time_converter(seconds) {
+
   let h_time = Math.floor(seconds / 3600);
   let m_time = Math.floor((seconds % 3600) / 60);
   let s_time = (seconds % 60)
-  console.log(h_time, m_time, s_time);
-  
-  let ready_time = `${!h_time? '' : h_time}`;
+  return `${h_time? h_time + ":" : ''}${m_time < 10? '0' + m_time + ":" : m_time + ":" }${s_time < 10? '0' + s_time : s_time}`;
 
 } 
 
-function hours_min(min) {
-  let min_time;
-  let hour_time;
-}
+//<div class='already_watched_period'></div>
