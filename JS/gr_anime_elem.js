@@ -3,6 +3,8 @@ import generate_hover from './hover_anime_details.js';
 
 function anime_elem(current_elem, isThereHover, where_stopped) {
   !isThereHover? console.log(where_stopped) : '';
+  let stopAt_sec = (where_stopped.stopPoint_min * 60) + where_stopped.stopPoint_sec;
+  let org_sec = (current_elem.org_duration_min * 60) + current_elem.org_duration_sec;
   let ready_elem =  `
   <div class="anime_item">
       <a href ='#'>
@@ -36,7 +38,7 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
 
           </div>`: 
           `<div class='at_stopPoint_detail'>
-              
+              <div class='already_watched_period' style="width: ${duration_watched_content(stopAt_sec, org_sec)}%"} ></div>
               <div class='episode'>
                 EP
                 <span>
@@ -45,8 +47,8 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
               </div>
 
               <div class='duration_cont'>
-                ${time_converter((where_stopped.stopPoint_min * 60) + where_stopped.stopPoint_sec)} /
-                ${time_converter((current_elem.org_duration_min * 60) + current_elem.org_duration_sec)}
+                ${time_converter(stopAt_sec)} /
+                ${time_converter(org_sec)}
               </div>
           </div>`
 
@@ -85,4 +87,6 @@ function time_converter(seconds) {
 
 } 
 
-//<div class='already_watched_period'></div>
+function duration_watched_content(stopPoint_sec, org_seconds) {
+  return ((stopPoint_sec / org_seconds) * 100).toFixed(2);
+}

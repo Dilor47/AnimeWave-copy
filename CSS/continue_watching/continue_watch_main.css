@@ -50,4 +50,14 @@
 .duration_cont{
   margin: 5px;
   font-size: 13px;
+  z-index: 2;
+}
+
+.already_watched_period{
+  position: absolute;
+  background-color: #5F1690;
+  /*width: 23%;*/
+  height: 25px;
+  z-index: 1;
+  top: 0;
 }
