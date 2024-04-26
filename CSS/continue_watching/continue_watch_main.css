@@ -56,8 +56,64 @@
 .already_watched_period{
   position: absolute;
   background-color: #5F1690;
-  /*width: 23%;*/
   height: 25px;
   z-index: 1;
   top: 0;
+}
+
+.dlt_sign_cont{
+  font-weight: 600; 
+  color: black; 
+  font-size: 17px;
+  position: absolute;
+  top: -10%;
+  right: 7.5%;
+  transform: translateY(40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 3;
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+dlt_sign_cont{
+  font-weight: 600; 
+  color: black; 
+  font-size: 17px;
+  position: absolute;
+  top: -10%;
+  right: 7.5%;
+  transform: translateY(40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 3;
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  pointer-events: none;
+  
+}
+
+.dlt_button{
+  background-color: #5F1690;
+}
+
+
+.anim.continue_part:hover  + .dlt_sign_cont,
+.dlt_sign_cont:hover{
+  pointer-events: auto;
+  top: 0;
+  opacity: 1;
+  cursor: pointer;
 }
