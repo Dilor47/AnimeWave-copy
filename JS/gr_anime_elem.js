@@ -6,15 +6,15 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
   let stopAt_sec = (where_stopped.stopPoint_min * 60) + where_stopped.stopPoint_sec;
   let org_sec = (current_elem.org_duration_min * 60) + current_elem.org_duration_sec;
   let ready_elem =  `
-  <div class="anime_item">
-      <a href ='#'>
-        <div class="anim ${isThereHover? '': 'continue_part'}">
-          <div class='img_container'>
-            <img src="${current_elem.img_anime}" >
-          </div>
-          
-          ${isThereHover? 
-          `<div class="meta">
+  <div class="anime_item"> 
+    <a href="#" class='link_tag ${isThereHover? '': 'continue_part'}' >
+      <div class="anim ">
+        <div class='img_container'>
+          <img src="${current_elem.img_anime}" >
+        </div>
+
+        ${isThereHover? 
+        `<div class="meta">
             <div class="meta_elems">
               ${current_elem.sub?
                 `<div class="ep_subhov">
@@ -24,7 +24,7 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
                 ` <div class="ep_michov">
                   <i class="ep_michov_amount fa faElem">${current_elem.dub}</i>
                 </div>`: ''}
-            
+              
               ${current_elem.total_episodes? 
                 `<div class="ep_episodeshov">
                   <i class="ep_episodeshov_amount fa faElem">${current_elem.total_episodes}</i>
@@ -35,43 +35,46 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
             <div class="watch_to_Elm">
               <i class='type_anime_Elm'>${current_elem.anime_type}</i>  
             </div>
-
           </div>`: 
-          `<div class='at_stopPoint_detail'>
-              <div class='already_watched_period' style="width: ${duration_watched_content(stopAt_sec, org_sec)}%"} ></div>
-              <div class='episode'>
-                EP
-                <span>
-                ${where_stopped.current_ep}
-                </span>
-              </div>
+        `<div class='at_stopPoint_detail'>
+            <div class='already_watched_period' style="width: ${duration_watched_content(stopAt_sec, org_sec)}%"} ></div>
+            <div class='episode'>
+              EP
+              <span>
+              ${where_stopped.current_ep}
+              </span>
+            </div>
 
-              <div class='duration_cont'>
-                ${time_converter(stopAt_sec)} /
-                ${time_converter(org_sec)}
-              </div>
-          </div>`
+            <div class='duration_cont'>
+              ${time_converter(stopAt_sec)}
+              ${time_converter(org_sec)}
+            </div>
+        </div>`}
+      </div>
+    </a>
+  
+  
+    ${isThereHover? generate_hover(current_elem, 
+      'recently_updated ' + 
+      first_hover_loc(current_elem) + 
+      second_hover_loc() + 
+      third_hover_loc(current_elem)): ''}
 
-           }
-
-        </div>
-        
-        ${isThereHover? generate_hover(current_elem, 
-          'recently_updated ' + 
-          first_hover_loc(current_elem) + 
-          second_hover_loc() + 
-          third_hover_loc(current_elem)): ''}
-
-      </a>
+    ${!isThereHover? `
+    <button class='dlt_sign_cont' >
+      <i class="fa-solid fa-xmark"></i>
+    </button>`: ''}
+   
       
+    <div class="info"> 
       <a href='#'>
-        <div class="info"> 
+        <p>
           ${current_elem.title}
-        </div>
+        </p>
       </a>
-      
-
     </div>
+
+  </div>
   `;
   return ready_elem;
 }
