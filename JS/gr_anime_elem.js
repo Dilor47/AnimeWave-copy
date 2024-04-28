@@ -2,7 +2,6 @@ import {first_hover_loc, second_hover_loc, third_hover_loc} from './gr_recently_
 import generate_hover from './hover_anime_details.js';
 
 function anime_elem(current_elem, isThereHover, where_stopped) {
-  !isThereHover? console.log(where_stopped) : '';
   let stopAt_sec = (where_stopped.stopPoint_min * 60) + where_stopped.stopPoint_sec;
   let org_sec = (current_elem.org_duration_min * 60) + current_elem.org_duration_sec;
   let ready_elem =  `
@@ -61,7 +60,7 @@ function anime_elem(current_elem, isThereHover, where_stopped) {
       third_hover_loc(current_elem)): ''}
 
     ${!isThereHover? `
-    <button class='dlt_sign_cont' >
+    <button class='dlt_sign_cont' id_elem='${where_stopped.id}'>
       <i class="fa-solid fa-xmark"></i>
     </button>`: ''}
    

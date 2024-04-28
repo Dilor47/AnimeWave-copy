@@ -1,3 +1,4 @@
+import {continue_watching_anime} from '../JS/continue_watch/continue_watching.js';
 let stopPoint_data = [
   {
     id: 5,
@@ -59,4 +60,11 @@ let stopPoint_data = [
 
 ];
 
-export default stopPoint_data;
+export function get_stopPoint_data() {
+  return stopPoint_data;
+}
+
+export function updater_data(new_data) {
+  stopPoint_data = new_data;
+  continue_watching_anime();
+}
