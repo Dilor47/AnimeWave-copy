@@ -106,20 +106,15 @@
   cursor: pointer;
 }
 
-
-
-
-
-
 .popUp_message{
   position: fixed;
   bottom: 2%;
   right: 0;
-  z-index: 2222;
+  z-index: 5;
   background-color: rgb(5, 134, 167);
   padding: 10px;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: whitesmoke;
   display: flex;
   flex-direction: row;
@@ -146,4 +141,10 @@
 
 .close_btn:hover{
   color: whitesmoke;
+}
+
+@media screen and (max-width: 1200px) {
+  .popUp_message{
+    font-size: 12px;
+  }
 }
