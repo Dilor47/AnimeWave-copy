@@ -105,3 +105,45 @@
 .link_tag:hover{
   cursor: pointer;
 }
+
+
+
+
+
+
+.popUp_message{
+  position: fixed;
+  bottom: 2%;
+  right: 0;
+  z-index: 2222;
+  background-color: rgb(5, 134, 167);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popUp_message.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.popups_message i{
+  padding: 5px;
+}
+
+.close_btn{
+  cursor: pointer;
+  color: rgba(245, 245, 245, 0.651);
+}
+
+.close_btn:hover{
+  color: whitesmoke;
+}
