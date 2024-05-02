@@ -3,7 +3,6 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
     <link rel="stylesheet" href="CSS/main_page.css">
     <link rel="stylesheet" href="CSS/on_screen_header.css/header_style.css">
     <link rel="stylesheet" href="CSS/on_screen_header.css/drop_down_start.css"> 
@@ -19,7 +18,7 @@
     <link rel="stylesheet" href="CSS/top_anime/settings_meta.css" >
     <link rel="stylesheet" href="CSS/manga_ad.css">
     <link rel="stylesheet" href="CSS/continue_watching/continue_watch_main.css" >
- 
+    <link rel="stylesheet" href="CSS/release_added_complt/cont_updates.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -286,8 +285,33 @@
           </div>
         </div>
 
-      <div class="new_elem"></div>
+        <div class="cont_animeNew">
 
+          <div class="for_flex new_release">
+            <p class="cont_title">
+              NEW RELEASE
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </p>
+            <div class="new_release_adrs adrs"></div>
+          </div>
+
+          <div class="for_flex new_added">
+            <p class="cont_title">
+              NEW ADDED
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </p>
+            <div class="new_added_adrs adrs"></div>
+          </div>
+
+          <div class="for_flex just_completed">
+            <p class="cont_title">
+              JUST COMPLETED
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </p>
+            <div class="just_complt_adrs adrs"></div>
+          </div>
+
+        </div>
 
       </div>
 
@@ -310,7 +334,10 @@
           
         </div>
       </div>
-    </div>    
+    </div>  
+    
+    
+
     <div class="popUp_message">
       <span class="popups_message">
         <i class="fa-solid fa-circle-info"></i>
@@ -319,7 +346,6 @@
           <i class="fa-solid fa-xmark"></i>
         </span>
       </span>
-
     </div>
     
     
@@ -350,5 +376,6 @@
     <script type="module" src="JS/gr_anime_elem.js" ></script>
     <script type="module" src="data/current_watching_anime.js"></script>
     <script type="module" src="JS/continue_watch/dlt_logic_ContWatch.js"></script>
+    <script type="module" src="JS/gr_little_animeElem.js" ></script>
   </body>
 </html>
