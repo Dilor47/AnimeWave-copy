@@ -18,11 +18,13 @@ function gr_element(adrs, find_data) {
     }
     html += `
     <div class="element little">
+
       <div class="anime_pict little">
         <img src="${anime_elem.img_anime}">
+        ${generate_hover(anime_elem, 'little')}
       </div>
 
-     ${generate_hover(anime_elem, 'little')}
+      
 
       <div class="deep_desc">
         <div class="title little">
