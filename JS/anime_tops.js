@@ -43,17 +43,14 @@ function render_list() {
           ${anime_elem.title}
         </div>
 
-        <div class="ep_release">
+        <div class="ep_release little">
 
-          <div class="mic_sub_total">
-            
+          <div class="mic_sub_total little">
             ${isThereSubDub(anime_elem.sub, 'sub')}
-
             ${isThereSubDub(anime_elem.dub, 'mic')}
-            
             ${getTotalEp(anime_elem.total_episodes)}
-
           </div>
+
           <div class="watch_to">
             <div class='minus_sign'>
               <i class="fa-solid fa-minus fa-xs"></i>
