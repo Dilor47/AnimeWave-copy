@@ -19,8 +19,8 @@
 }
 
 .main_hover_cont.top_anime{
-  top: 50%;
-  left: 25%;
+  top: 15%;
+  left: 95%;
   transform-origin: top left;
 }
 
@@ -30,7 +30,18 @@
   transform-origin: left;
 }
 
-.anime_pict:hover + .main_hover_cont{
+.main_hover_cont.little{
+  top: 20%;
+  left: 115%;
+  transform-origin: top left;
+}
+
+.anime_pict:hover > .main_hover_cont{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.anime_pict.little:hover > .main_hover_cont{
   opacity: 1;
   transform: scale(1);
 }
@@ -237,16 +248,14 @@
 
 @media screen and (max-width: 1700px) {
   .main_hover_cont.top_anime{
-    top: 50%;
-    left: -55%;
+    top: 15%;
+    left: auto;
+    right: 95%;
     transform-origin: top right;
   }
 }
 
 @media screen and (max-width: 1550px) {
-  .main_hover_cont.top_anime{
-    left: -65%;
-  }
   .anime_hover_cont{
     padding: 15px;
   }
@@ -290,12 +299,6 @@
     height: 33px;
   }
   
-}
-
-@media screen and (max-width: 1350px) {
-  .main_hover_cont.top_anime{
-    left: -75%;
-  }
 }
 
 @media screen and (max-width: 1200px) {
