@@ -368,7 +368,7 @@ const animeData = [
     data_aired: 'Sep 13, 2022',
     org_duration_min: 30,
     org_duration_sec: 0,
-    status: 'Ongoing',
+    status: 'Completed',
     genre: ['Sci-Fi', 'Action'],
     link_to_anime: 'https://example.com/cyberpunk-edgerunners',
     id: 17
@@ -566,7 +566,7 @@ const animeData = [
     data_aired: "Dec 5, 2021",
     org_duration_min: 24,
     org_duration_sec: 0,
-    status: "Releasing",
+    status: "Ongoing",
     genre: ["Action", "Demons", "Historical", "Shounen", "Supernatural"],
     link_to_anime: "https://example.com/demon-slayer-entertainment-district",
     id: 26

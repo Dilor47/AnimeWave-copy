@@ -11,7 +11,7 @@ body{
   background-color: var(--darker-main-color);
   color: #777;
   font-family: Nunito,Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  height: auto;
+  height: 500vh;
 }
 
 body, html{
