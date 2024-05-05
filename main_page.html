@@ -288,36 +288,45 @@
 
         <div class="cont_animeNew">
 
-          <div class="for_flex new_release">
-            <p class="cont_title">
-              <a href="#">
-                <span>NEW RELEASE</span>
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </p>
-            <div class="new_release_adrs adrs"></div>
+          <div class="smaller_style">
+            <div class="tabs">
+              <div data-name="new_release" class="tab active">New Release</div>
+              <div data-name="new_added" class="tab">Newly Added</div>
+              <div data-name="just_completed" class="tab">Just Completed</div>
+            </div>
           </div>
 
-          <div class="for_flex new_added">
-            <p class="cont_title">
-              <a href="#">
-                <span>NEW ADDED</span> 
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </p>
-            <div class="new_added_adrs adrs"></div>
-          </div>
+          <div class="bigger_style">
+            <div class="for_flex new_release active">
+              <p class="cont_title">
+                <a href="#">
+                  <span>NEW RELEASE</span>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </p>
+              <div class="new_release_adrs adrs"></div>
+            </div>
 
-          <div class="for_flex just_completed">
-            <p class="cont_title">
-              <a href="#">
-                <span>JUST COMPLETED</span> 
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </p>
-            <div class="just_complt_adrs adrs"></div>
-          </div>
+            <div class="for_flex new_added">
+              <p class="cont_title">
+                <a href="#">
+                  <span>NEW ADDED</span> 
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </p>
+              <div class="new_added_adrs adrs"></div>
+            </div>
 
+            <div class="for_flex just_completed">
+              <p class="cont_title">
+                <a href="#">
+                  <span>JUST COMPLETED</span> 
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </p>
+              <div class="just_complt_adrs adrs"></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -389,5 +398,6 @@
     <script type="module" src="JS/continue_watch/dlt_logic_ContWatch.js"></script>
     <script type="module" src="JS/gr_little_animeElem.js" ></script>
     <script type="module" src="JS/gr_little_animeElem.js" ></script>
+    <script type="module" src="JS/release_added_compl.js" ></script>
   </body>
 </html>

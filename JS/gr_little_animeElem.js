@@ -57,7 +57,7 @@ function gr_element(adrs, wanted_data) {
 
 }
 
-function filtering_data(data_class) {
+export function filtering_data(data_class) {
   const data_to_filter = animeData.filter((elem) => elem.status === data_class);
 
   const filtered_data = data_to_filter.sort((a, b) => {

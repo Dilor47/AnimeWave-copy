@@ -1,4 +1,5 @@
-.cont_animeNew{
+.cont_animeNew,
+.bigger_style{
   display: flex;
   width: 100%;
   height: auto;
@@ -102,9 +103,55 @@
   padding: 0;
 }
 
+.smaller_style{
+  display: flex;
+  flex-direction: column;
+}
+
+.smaller_style .tabs{
+  background-color: rgb(33, 33, 33);
+  display: none;
+  flex-direction: row;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+}
+
+.tabs .tab{
+  flex: 1;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.tabs .tab:hover{
+  color: rgb(33, 33, 33);
+  background-color: var(--color-text);
+}
+
+.tab.active{
+  background-color: var(--purple-lighter-color);
+  color: aliceblue;
+}
+
+.tab.active:hover{
+  background-color: var(--purple-lighter-color);
+  color: aliceblue;
+}
+
+.new_release.active,
+.new_added.active,
+.just_completed.active{
+  display: flex;
+  flex-direction: column;
+}
 
 @media screen and (max-width: 1200px) {
-  .cont_animeNew{
+  .cont_animeNew,
+  .bigger_style{
     flex-direction: column;
   }
   .element.little{
@@ -117,6 +164,17 @@
 }
 
 @media screen and (max-width: 770px) {
+
+  .new_release,
+  .new_added,
+  .just_completed{
+    display: none;
+  }
+  .smaller_style .tabs{
+    display: flex;
+  }
+
+
   .element.little{
     width: 100%;
   }
