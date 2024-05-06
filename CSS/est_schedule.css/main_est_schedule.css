@@ -1,0 +1,40 @@
+.est_schedule_cont{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  background-color: rgba(0, 192, 134, 0.212);
+  margin: 10px;
+}
+
+.est_schedule_cont header{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 180px;
+  background-color: rgb(255, 0, 123);
+  border: 1px solid white;
+}
+
+.current_timeDate{
+  display: flex;
+  flex-direction: row;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.37);
+  align-items: center;
+  padding: 0 50px;
+}
+
+.current_timeDate h2{
+  margin: 0 10px;
+  color: var(--color-text);
+}
+
+.current_timeDate span{
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.second_carousel{
+  height: 60%;
+}
